@@ -1,1 +1,0 @@
-# gittebjorn_kommentarer
