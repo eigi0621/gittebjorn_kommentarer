@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="Gitte Bjørn - Om smykkekurserne, en side der fortæller om smykkerkurserne">
+  <title>Gitte Bjorn - Værker</title>
+  <link rel="stylesheet" href="css/basestyle.css">
+  <link rel="stylesheet" href="css/tablet.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="https://use.typekit.net/lge2vfw.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <style>
+    .splash_col_wrap {
+      width: 100vw;
+      position: relative;
+      top: -30px;
+      left: -30px;
+      display: flex;
+      flex-wrap: wrap-reverse;
+      overflow: hidden;
+    }
+
+    .splash_col {
+      flex-grow: 1;
+      flex-basis: 400px;
+    }
+
+    figure.splash_col {
+      min-height: 400px;
+    }
+
+    div.splash_col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 5%;
+    }
+
+    #gitte_img {
+      width: 100%;
+      height: 100%;
+      background-image: url("http://eigilnikolajsen.dk/kea/10_eksamen/wordpress/wp-content/uploads/2020/06/gitte_bjorn_forside.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .besk_wrap {
+      margin: 0;
+    }
+
+    section.layout_section img {
+      margin: 30px 0;
+    }
+
+    #content_list {}
+
+    #content_list li {
+      list-style: none;
+      cursor: pointer;
+      line-height: 0;
+      display: block;
+    }
+
+    #content_list li p {
+      width: max-content;
+      font-size: .7rem;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: .05rem;
+      text-transform: uppercase;
+      padding: 15px;
+      overflow: hidden;
+      position: relative;
+      z-index: 3;
+      transition: .7s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    #content_list li p:hover {
+      letter-spacing: .07rem;
+    }
+
+    #content_list_wrap {
+      height: 100%;
+    }
+
+    #list_overlay {
+      width: calc(100% + 10px);
+      height: 30px;
+      background: #fff;
+      margin: 0 0 -38px -10px;
+      padding: 10px;
+      position: relative;
+      z-index: 2;
+    }
+
+    #fill_wrap {
+      display: grid;
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: "cl"
+        "fill";
+    }
+
+    #cv_list p {
+      font-size: .9rem;
+    }
+
+    #se_kontakt {
+      background: #64665D;
+    }
+
+    #content_list {
+      grid-area: cl;
+    }
+
+    #fill {
+      grid-area: fill;
+      overflow: hidden;
+    }
+
+    .layout_section button {
+      width: auto;
+      display: block;
+      margin-top: 30px;
+      font-size: 1rem;
+      letter-spacing: .3rem;
+    }
+
+    section.layout_section h3 {
+      margin: .3rem 0 1rem 0;
+    }
+
+    section.layout_section:nth-child(7n+1) .content_wrap {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas: "i"
+        "t"
+        "i2";
+    }
+
+    section.layout_section:nth-child(7n+1) .content_wrap .besk_wrap {
+      grid-area: t;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(1) {
+      grid-area: i;
+    }
+
+    section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(2) {
+      grid-area: i2;
+      width: 66%;
+    }
+
+
+
+    section.layout_section:nth-child(7n+2) .content_wrap {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas: "i"
+        "t";
+    }
+
+    section.layout_section:nth-child(7n+2) .content_wrap .besk_wrap {
+      grid-area: t;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    section.layout_section:nth-child(7n+2) .content_wrap img {
+      grid-area: i;
+    }
+
+
+
+    section.layout_section:nth-child(7n+3) .content_wrap {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas: "t"
+        "i";
+    }
+
+    section.layout_section:nth-child(7n+3) .content_wrap .besk_wrap {
+      grid-area: t;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    section.layout_section:nth-child(7n+3) .content_wrap img {
+      grid-area: i;
+    }
+
+
+
+    section.layout_section:nth-child(7n+4) .content_wrap {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas: "i"
+        "t"
+        "i2";
+    }
+
+    section.layout_section:nth-child(7n+4) .content_wrap .besk_wrap {
+      grid-area: t;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(1) {
+      grid-area: i;
+    }
+
+    section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(2) {
+      grid-area: i2;
+      width: 66%;
+    }
+
+
+
+    section.layout_section:nth-child(7n+5) .content_wrap {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas: "t"
+        "i"
+    }
+
+    section.layout_section:nth-child(7n+5) .content_wrap .besk_wrap {
+      grid-area: t;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    section.layout_section:nth-child(7n+5) .content_wrap img {
+      grid-area: i;
+    }
+
+
+
+    section.layout_section:nth-child(7n+6) .content_wrap {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas: "i"
+        "t";
+    }
+
+    section.layout_section:nth-child(7n+6) .content_wrap .besk_wrap {
+      grid-area: t;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    section.layout_section:nth-child(7n+6) .content_wrap img {
+      grid-area: i;
+    }
+
+
+
+    section.layout_section:nth-child(7n+7) .content_wrap {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas: "t"
+        "i";
+    }
+
+    section.layout_section:nth-child(7n+7) .content_wrap .besk_wrap {
+      grid-area: t;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    section.layout_section:nth-child(7n+7) .content_wrap img {
+      grid-area: i;
+    }
+
+    @media only screen and (min-width: 800px) {
+      .scroll_pos {
+        justify-content: flex-end;
+      }
+
+      #cv_list p {
+        font-size: 1rem;
+      }
+
+      #content_list li:last-child p {
+        margin-bottom: 100px;
+      }
+
+      .splash_col_wrap {
+        top: -100px;
+        left: -30px;
+      }
+
+      #fill_wrap {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "cl"
+          "fill";
+      }
+
+      #content_list {
+        grid-area: cl;
+      }
+
+      #fill {
+        grid-area: fill;
+        overflow: hidden;
+      }
+
+      section.layout_section:nth-child(7n+1) .content_wrap {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2);
+        grid-template-areas: "t i i"
+          "i2 . .";
+      }
+
+      section.layout_section:nth-child(7n+1) .content_wrap .besk_wrap {
+        grid-area: t;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(1) {
+        grid-area: i;
+      }
+
+      section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(2) {
+        grid-area: i2;
+        width: 100%;
+      }
+
+
+
+      section.layout_section:nth-child(7n+2) .content_wrap {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2);
+        grid-template-areas: "i i ."
+          ". t t";
+      }
+
+      section.layout_section:nth-child(7n+2) .content_wrap .besk_wrap {
+        grid-area: t;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      section.layout_section:nth-child(7n+2) .content_wrap img {
+        grid-area: i;
+      }
+
+
+
+      section.layout_section:nth-child(7n+3) .content_wrap {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "t i i";
+      }
+
+      section.layout_section:nth-child(7n+3) .content_wrap .besk_wrap {
+        grid-area: t;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      section.layout_section:nth-child(7n+3) .content_wrap img {
+        grid-area: i;
+      }
+
+
+
+      section.layout_section:nth-child(7n+4) .content_wrap {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "i i t"
+          ". . i2";
+      }
+
+      section.layout_section:nth-child(7n+4) .content_wrap .besk_wrap {
+        grid-area: t;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+      }
+
+      section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(1) {
+        grid-area: i;
+      }
+
+      section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(2) {
+        grid-area: i2;
+        width: 100%;
+      }
+
+
+
+      section.layout_section:nth-child(7n+5) .content_wrap {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2);
+        grid-template-areas: ". t t"
+          "i i i";
+      }
+
+      section.layout_section:nth-child(7n+5) .content_wrap .besk_wrap {
+        grid-area: t;
+      }
+
+      section.layout_section:nth-child(7n+5) .content_wrap img {
+        grid-area: i;
+      }
+
+
+
+      section.layout_section:nth-child(7n+6) .content_wrap {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: ". i i"
+          "t t .";
+      }
+
+      section.layout_section:nth-child(7n+6) .content_wrap .besk_wrap {
+        grid-area: t;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      section.layout_section:nth-child(7n+6) .content_wrap img {
+        grid-area: i;
+      }
+
+
+
+      section.layout_section:nth-child(7n+7) .content_wrap {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "i i t";
+      }
+
+      section.layout_section:nth-child(7n+7) .content_wrap .besk_wrap {
+        grid-area: t;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      section.layout_section:nth-child(7n+7) .content_wrap img {
+        grid-area: i;
+      }
+    }
+
+    @media only screen and (min-width: 1200px) {
+
+      #cv_list p {
+        font-size: 1.1rem;
+      }
+
+      .splash_col_wrap {
+        top: -100px;
+        left: -100px;
+      }
+
+      #fill_wrap {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: "cl fill fill fill fill fill"
+          "cv cv cv cv cv cv";
+      }
+
+      #cv_list {
+        grid-area: cv;
+      }
+
+      #content_list {
+        grid-area: cl;
+      }
+
+      #fill {
+        grid-area: fill;
+        overflow: hidden;
+      }
+
+      section.layout_section:nth-child(7n+1) .content_wrap {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2);
+        grid-template-areas:
+          ". t t i i"
+          "i2 i2 . . .";
+      }
+
+      section.layout_section:nth-child(7n+1) .content_wrap .besk_wrap {
+        grid-area: t;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(1) {
+        grid-area: i;
+      }
+
+      section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(2) {
+        grid-area: i2;
+      }
+
+
+
+      section.layout_section:nth-child(7n+2) .content_wrap {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2);
+        grid-template-areas:
+          "i i i . ."
+          ". . t t .";
+      }
+
+      section.layout_section:nth-child(7n+2) .content_wrap .besk_wrap {
+        grid-area: t;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      section.layout_section:nth-child(7n+2) .content_wrap img {
+        grid-area: i;
+      }
+
+
+
+      section.layout_section:nth-child(7n+3) .content_wrap {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: "t t i i i";
+      }
+
+      section.layout_section:nth-child(7n+3) .content_wrap .besk_wrap {
+        grid-area: t;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      section.layout_section:nth-child(7n+3) .content_wrap img {
+        grid-area: i;
+      }
+
+
+
+      section.layout_section:nth-child(7n+4) .content_wrap {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2);
+        grid-template-areas: "i i t t ."
+          ". . . i2 i2";
+      }
+
+      section.layout_section:nth-child(7n+4) .content_wrap .besk_wrap {
+        grid-area: t;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+      }
+
+      section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(1) {
+        grid-area: i;
+      }
+
+      section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(2) {
+        grid-area: i2;
+      }
+
+
+
+      section.layout_section:nth-child(7n+5) .content_wrap {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2);
+        grid-template-areas: ". . t t ."
+          "i i i i .";
+      }
+
+      section.layout_section:nth-child(7n+5) .content_wrap .besk_wrap {
+        grid-area: t;
+      }
+
+      section.layout_section:nth-child(7n+5) .content_wrap img {
+        grid-area: i;
+      }
+
+
+
+      section.layout_section:nth-child(7n+6) .content_wrap {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2);
+        grid-template-areas: ". . i i i"
+          ". t t . .";
+      }
+
+      section.layout_section:nth-child(7n+6) .content_wrap .besk_wrap {
+        grid-area: t;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      section.layout_section:nth-child(7n+6) .content_wrap img {
+        grid-area: i;
+      }
+
+
+
+      section.layout_section:nth-child(7n+7) .content_wrap {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: "i i i t t";
+      }
+
+      section.layout_section:nth-child(7n+7) .content_wrap .besk_wrap {
+        grid-area: t;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      section.layout_section:nth-child(7n+7) .content_wrap img {
+        grid-area: i;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+    </nav>
+  </header>
+  <main id="main">
+    <div class="splash_col_wrap">
+      <figure class="img_wrap splash_col">
+        <div id="gitte_img"></div>
+      </figure>
+      <div class="splash_col">
+        <h1>Gitte Bjørn</h1>
+        <p>Mit kreative arbejde er tæt forbundet med kroppen. Da jeg startede i 1993 fyldte smykkerne mest i mit univers. I dag lægger jeg langt det meste af min energi i at skabe objekter og korpusarbejder.
+          Fælles for mine værker på tværs af genrer, teknikker og temaer er kærligheden til at forme i metal.
+          Jeg arbejder fokuseret mod en soloudstilling med et fast tema, der også styrer prioriteringen af min arbejdsindsats.</p>
+        <button id="se_va">Gitte Bjørns værker</button>
+        <button id="se_cv">Gitte Bjørns CV</button>
+        <a href="kontakt.html">
+          <button id="se_kontakt">Kontakt</button>
+        </a>
+      </div>
+    </div>
+    <div id="fill_wrap">
+      <div id="content_list_wrap">
+        <ul id="content_list">
+        </ul>
+      </div>
+      <div id="fill"></div>
+    </div>
+  </main>
+  <footer id="footer">
+    <div class="footer_info">
+      <h4>Gitte Bjørn Smykkekurser</h4>
+      <p>Prags Boulevard 63C, 2300 København S</p>
+      <a href="mailto:kontakt@gittebjorn.dk">
+        <p>kontakt@gittebjorn.dk</p>
+      </a>
+      <a href="cookies-og-privatlivspolitik.html">
+        <p>Cookie- og privatlivspolitik</p>
+      </a>
+      <div class="footer_img">
+        <img src="img/insta.svg" alt="instagram ikon">
+        <img src="img/fb.svg" alt="facebook ikon">
+        <img src="img/yt.svg" alt="youtube ikon">
+      </div>
+    </div>
+    <div class="footer_logo">
+      <img src="img/gb_logo_svg_w.svg" alt="Gitte Bjørn Logo">
+      <p>KEA MMD 2. sem. eksamen 2020</p>
+    </div>
+  </footer>
+  <script src="js/menu.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/ScrollToPlugin.min.js"></script>
+  <script src="js/smoothScroll.js"></script>
+  <script src="js/totop.js"></script>
+  <script src="js/scrollarrow.js"></script>
+  <script>
+    async function hentJSON_smykkekurser_splash() {
+      let wpEnd = `pages/29?_fields=content`;
+      const response = await fetch(wp + wpEnd);
+      let json = await response.json();
+
+      let cv = document.createElement("div");
+      cv.id = "cv_list";
+      cv.innerHTML = json.content.rendered;
+      document.querySelector("#fill_wrap").appendChild(cv);
+
+      document.querySelector("#se_cv").addEventListener("click", () => {
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: ".cv_group",
+          ease: "power3.inOut"
+        })
+      })
+      document.querySelector("#se_va").addEventListener("click", () => {
+        gsap.to(window, {
+          duration: 1,
+          scrollTo: ".layout_section:first-of-type",
+          ease: "power3.inOut"
+        })
+      })
+      setTimeout(scroller, 100);
+    }
+
+    document.querySelector("#se_kontakt").addEventListener("click", () => {
+      location.href = "kontakt.html"
+    })
+
+    document.addEventListener("DOMContentLoaded", hentJSON_smykkekurser);
+
+    let N = 0;
+
+    async function hentJSON_smykkekurser() {
+      let wpEnd = `vaerk?_fields=title,aarstal,beskrivelse,thumb,bg,txt&per_page=10`;
+      const response = await fetch(wp + wpEnd);
+      let json = await response.json();
+
+      hentJSON_smykkekurser_splash();
+
+      json.forEach((t) => {
+        N++;
+
+        let s = document.createElement("section");
+        s.classList.add("layout_section");
+        s.dataset.secnr = N;
+        s.dataset.bg = t.bg;
+        s.dataset.txt = t.txt;
+        s.id = `vaerker_section_${N}`;
+        let content_wrap = document.createElement("div");
+        content_wrap.classList.add("content_wrap");
+        let besk_wrap = document.createElement("div");
+        besk_wrap.classList.add("besk_wrap");
+        let aarstal = document.createElement("h3");
+        aarstal.textContent = t.aarstal;
+        let titel = document.createElement("h4");
+        titel.innerHTML = t.title.rendered;
+        let cta = document.createElement("button");
+        cta.textContent = "læs mere";
+        cta.addEventListener("click", () => {
+          location.href = `vaerk.html?id=${s.dataset.secnr}`;
+        })
+        besk_wrap.appendChild(aarstal);
+        besk_wrap.appendChild(titel);
+        besk_wrap.appendChild(cta);
+        content_wrap.appendChild(besk_wrap);
+
+        let img = document.createElement("img");
+        img.style.cursor = "pointer";
+        img.src = t.thumb[0].guid;
+        img.alt = t.thumb[0].post_excerpt;
+        img.addEventListener("click", () => {
+          location.href = `vaerk.html?id=${s.dataset.secnr}`;
+        })
+        content_wrap.appendChild(img);
+
+        if (N % 7 == 1 || N % 7 == 4) {
+          let img2 = document.createElement("img");
+          img2.style.cursor = "pointer";
+          img2.src = t.thumb[1].guid;
+          img2.alt = t.thumb[1].post_excerpt;
+          img2.addEventListener("click", () => {
+            location.href = `vaerk.html?id=${s.dataset.secnr}`;
+          })
+          content_wrap.appendChild(img2);
+        }
+
+        s.appendChild(content_wrap);
+        document.querySelector("#fill").appendChild(s);
+
+        let li = document.createElement("li");
+        li.dataset.number = N;
+        let p = document.createElement("p");
+        p.innerHTML = t.title.rendered;
+        li.appendChild(p);
+        document.querySelector("#content_list").appendChild(li);
+
+        li.addEventListener("click", function() {
+          var targetSection = `.layout_section:nth-child(7n+${this.dataset.number})`;
+          console.log(this.dataset.number);
+
+          gsap.to(window, {
+            duration: 1,
+            scrollTo: targetSection,
+            ease: "power3.inOut"
+          })
+        })
+      })
+    }
+
+    function scroller() {
+      if (window.innerWidth > 1200) {
+        var scrollHeight = document.querySelector("#fill").clientHeight - window.innerHeight;
+
+        var tl = gsap.timeline()
+
+        tl.to("#content_list", {
+          y: (window.innerHeight * .3) + scrollHeight,
+          ease: "none"
+        })
+
+        var ourScene = new ScrollMagic.Scene({
+            triggerElement: "#content_list_wrap",
+            duration: scrollHeight,
+            triggerHook: .1
+          })
+          .setTween(tl)
+          .addTo(controller)
+      }
+
+      var splashScene = new ScrollMagic.Scene({
+          triggerElement: ".splash_col_wrap",
+          duration: "200%",
+          triggerHook: 0
+        })
+        .setTween(
+          gsap.to(".splash_col", {
+            y: "100%",
+            ease: "none"
+          })
+        )
+        .addTo(controller)
+
+      document.querySelector("#main").style.background = "rgba(255, 255, 255, 1)";
+
+      document.querySelectorAll(".layout_section").forEach((s) => {
+        var bg = s.dataset.bg;
+        var txt = s.dataset.txt;
+        var timeline = gsap.timeline()
+
+        timeline.to("#main", {
+            background: "#" + bg,
+            ease: "power1.inOut"
+          }, 0)
+          .to("#main *", {
+            color: "#" + txt,
+            ease: "power1.inOut"
+          }, 0)
+          .to("button", {
+            background: "#" + txt,
+            color: "#" + bg,
+            ease: "power1.inOut"
+          }, 0)
+          .to(".nav_link_wrap", {
+            background: "#" + bg,
+            ease: "power1.inOut"
+          }, 0)
+          .to("nav", {
+            background: "#" + bg,
+            ease: "power1.inOut"
+          }, 0)
+          .to(".nav_link", {
+            color: "#" + txt,
+            ease: "power1.inOut"
+          }, 0)
+          .to(".nav_link a", {
+            color: "#" + txt,
+            ease: "power1.inOut"
+          }, 0)
+          .to(".nav_link_wrap ul", {
+            background: "#" + bg,
+            ease: "power1.inOut"
+          }, 0)
+          .to(logo, {
+            fill: "#" + txt,
+            ease: "power1.inOut"
+          }, 0)
+          .to(burger1_wrap, {
+            fill: "#" + txt,
+            ease: "power1.inOut"
+          }, 0)
+          .to(burger2_wrap, {
+            fill: "#" + txt,
+            ease: "power1.inOut"
+          }, 0)
+          .to(burger3_wrap, {
+            fill: "#" + txt,
+            ease: "power1.inOut"
+          }, 0)
+
+        document.querySelectorAll("#content_list li").forEach((l) => {
+          let p = l.querySelector("p");
+          if (s.dataset.secnr == l.dataset.number) {
+            timeline.to(p, {
+              backgroundColor: "rgba(255, 255, 255, 1)",
+              fontWeight: "300"
+            }, 0)
+          } else {
+            timeline.to(p, {
+              backgroundColor: "rgba(255, 255, 255, 0)",
+              fontWeight: "300"
+            }, 0)
+          }
+        })
+
+        var scene = new ScrollMagic.Scene({
+            triggerElement: s,
+            duration: "25%",
+            triggerHook: .7
+          })
+          .setTween(timeline)
+          .addTo(controller)
+      })
+
+
+
+
+      var timelineCV = gsap.timeline()
+
+      timelineCV.to("#main", {
+          background: "#fff",
+          ease: "power1.inOut"
+        }, 0)
+        .to("#main *", {
+          color: "#000",
+          ease: "power1.inOut"
+        }, 0)
+        .to("button", {
+          background: "#000",
+          color: "#fff",
+          ease: "power1.inOut"
+        }, 0)
+        .to(".nav_link_wrap", {
+          background: "#fff",
+          ease: "power1.inOut"
+        }, 0)
+        .to("nav", {
+          background: "#fff",
+          ease: "power1.inOut"
+        }, 0)
+        .to(".nav_link", {
+          color: "#000",
+          ease: "power1.inOut"
+        }, 0)
+        .to(".nav_link a", {
+          color: "#000",
+          ease: "power1.inOut"
+        }, 0)
+        .to(".nav_link_wrap ul", {
+          background: "#fff",
+          ease: "power1.inOut"
+        }, 0)
+        .to(logo, {
+          fill: "#000",
+          ease: "power1.inOut"
+        }, 0)
+        .to(burger1_wrap, {
+          fill: "#000",
+          ease: "power1.inOut"
+        }, 0)
+        .to(burger2_wrap, {
+          fill: "#000",
+          ease: "power1.inOut"
+        }, 0)
+        .to(burger3_wrap, {
+          fill: "#000",
+          ease: "power1.inOut"
+        }, 0)
+
+
+      var scene = new ScrollMagic.Scene({
+          triggerElement: ".cv_group",
+          duration: "25%",
+          triggerHook: .7
+        })
+        .setTween(timelineCV)
+        .addTo(controller)
+    }
+
+  </script>
+</body>
+
+</html>

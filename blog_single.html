@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="Gitte Bjørn - Blog. Her ser du et opslag fra Bladguldet">
+  <title>Gitte Bjorn</title>
+  <link rel="stylesheet" href="css/basestyle.css">
+  <link rel="stylesheet" href="css/tablet.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="https://use.typekit.net/lge2vfw.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <style>
+    .blog_img_wrap {
+      width: 100vw;
+      height: 50vh;
+      position: relative;
+      left: -30px;
+      top: -100px;
+      overflow: hidden;
+      margin-bottom: -70px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-family: nobel, sans-serif;
+      font-weight: 800;
+      font-style: normal;
+      text-transform: uppercase;
+      line-height: 3.5rem;
+    }
+
+    .blog_img {
+      height: 100%;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    iframe {
+      width: 100%;
+    }
+
+    .blog_besk_wrap {
+      margin-bottom: 60px;
+    }
+
+    @media only screen and (min-width: 800px) {
+      .blog_img_wrap {
+        left: -100px;
+      }
+
+      h2 {
+        font-size: 3.5rem;
+        line-height: 4.8rem;
+      }
+    }
+
+    @media only screen and (min-width: 1200px) {
+      .wp-block-column {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+
+      h2 {
+        font-size: 4.5rem;
+        line-height: 6rem;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+    </nav>
+  </header>
+  <main id="main"></main>
+  <footer id="footer">
+    <div class="footer_info">
+      <h4>Gitte Bjørn Smykkekurser</h4>
+      <p>Prags Boulevard 63C, 2300 København S</p>
+      <a href="mailto:kontakt@gittebjorn.dk">
+        <p>kontakt@gittebjorn.dk</p>
+      </a>
+      <a href="cookies-og-privatlivspolitik.html">
+        <p>Cookie- og privatlivspolitik</p>
+      </a>
+      <div class="footer_img">
+        <img src="img/insta.svg" alt="instagram ikon">
+        <img src="img/fb.svg" alt="facebook ikon">
+        <img src="img/yt.svg" alt="youtube ikon">
+      </div>
+    </div>
+    <div class="footer_logo">
+      <img src="img/gb_logo_svg_w.svg" alt="Gitte Bjørn Logo">
+      <p>KEA MMD 2. sem. eksamen 2020</p>
+    </div>
+  </footer>
+  <script src="js/menu.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/ScrollToPlugin.min.js"></script>
+  <script src="js/smoothScroll.js"></script>
+  <script src="js/tilbage.js"></script>
+  <script>
+    let N = 0;
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id");
+    document.addEventListener("DOMContentLoaded", hentJSON_blog);
+
+    async function hentJSON_blog() {
+      let wpEnd = `blog?_fields=content,title,dato,img,cta`;
+      const response = await fetch(wp + wpEnd);
+      let json = await response.json();
+
+      json.forEach((t) => {
+        N++;
+
+        if (N == id) {
+          let s = document.createElement("section");
+          s.classList.add("blog_layout_section");
+          s.dataset.secnr = N;
+          document.querySelector("head title").textContent = `Gitte Bjorn - ${t.title.rendered}`;
+          let blog_content_wrap = document.createElement("div");
+          blog_content_wrap.classList.add("blog_content_wrap");
+          let blog_besk_wrap = document.createElement("div");
+          blog_besk_wrap.classList.add("blog_besk_wrap");
+          let blog_button_wrap = document.createElement("div");
+          blog_button_wrap.classList.add("blog_button_wrap");
+          let blog_img_wrap = document.createElement("div");
+          blog_img_wrap.classList.add("blog_img_wrap");
+          let dato = document.createElement("h3");
+          dato.textContent = t.dato;
+          let img = document.createElement("div");
+          img.classList.add("blog_img");
+          img.style.backgroundImage = `url(${t.img.guid})`;
+          let video = document.createElement("div");
+          video.classList.add("video_wrap");
+          video.innerHTML = t.content.rendered;
+          let cta = document.createElement("button");
+          cta.textContent = "tilbage";
+          cta.addEventListener("click", () => {
+            window.history.back();
+          })
+          blog_content_wrap.appendChild(blog_img_wrap);
+          blog_img_wrap.appendChild(img);
+          blog_besk_wrap.appendChild(dato);
+          blog_besk_wrap.appendChild(video);
+          blog_button_wrap.appendChild(cta);
+          blog_besk_wrap.appendChild(blog_button_wrap);
+          blog_content_wrap.appendChild(blog_besk_wrap);
+          s.appendChild(blog_content_wrap);
+          document.querySelector("#main").appendChild(s);
+        }
+      })
+    }
+
+  </script>
+</body>
+
+</html>

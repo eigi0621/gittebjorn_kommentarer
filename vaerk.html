@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="Gitte Bjørn - Gitte Bjørns kunsthåndværk og værker gennem tiden">
+  <title>Gitte Bjorn</title>
+  <link rel="stylesheet" href="css/basestyle.css">
+  <link rel="stylesheet" href="css/tablet.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="https://use.typekit.net/lge2vfw.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <style>
+    .scroll1,
+    .scroll2,
+    .scroll3 {
+      background-color: #fff;
+    }
+
+    article {
+      width: 100%;
+      margin: 50px 0;
+    }
+
+    #main section.layout_section {
+      margin: 0;
+    }
+
+    section.layout_section {
+      margin: 0;
+    }
+
+    .splash_wrap {
+      grid-area: t;
+      width: 100%;
+    }
+
+    .content_wrap article:nth-of-type(1) {
+      grid-area: i1;
+    }
+
+    .content_wrap article:nth-of-type(2) {
+      grid-area: i2;
+      width: 70%;
+    }
+
+    .content_wrap article:nth-of-type(3) {
+      grid-area: i3;
+    }
+
+    .content_wrap article:nth-of-type(4) {
+      grid-area: i4;
+      width: 70%;
+    }
+
+    .content_wrap article:nth-of-type(5) {
+      grid-area: i5;
+    }
+
+    .content_wrap article:nth-of-type(6) {
+      grid-area: i6;
+      width: 70%;
+    }
+
+    .content_wrap article:nth-of-type(7) {
+      grid-area: i7;
+    }
+
+    .content_wrap article:nth-of-type(8) {
+      grid-area: i8;
+      width: 70%;
+    }
+
+    .content_wrap article:nth-of-type(9) {
+      grid-area: i9;
+    }
+
+    .content_wrap article:nth-of-type(10) {
+      grid-area: i10;
+      width: 70%;
+    }
+
+    @media only screen and (min-width: 800px) {
+
+      .scroll_pos {
+        justify-content: flex-start;
+      }
+
+      #main article.img_besk_wrap:first-of-type {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      #main {
+        padding: 100px 30px 0 30px;
+      }
+
+      article {
+        width: 100%;
+        margin-bottom: 200px;
+      }
+
+      .content_wrap article:nth-of-type(2) {
+        width: 100%;
+      }
+
+      .content_wrap article:nth-of-type(4) {
+        width: 100%;
+      }
+
+      .content_wrap article:nth-of-type(6) {
+        width: 100%;
+      }
+
+      .content_wrap article:nth-of-type(8) {
+        width: 100%;
+      }
+
+      .content_wrap article:nth-of-type(10) {
+        width: 100%;
+      }
+
+      .content_wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+          "t t ."
+          ". i1 i1"
+          "i2 . ."
+          ". i3 i3"
+          "i4 i4 i4"
+          ". i5 i5"
+          "i6 i6 ."
+          ". i7 i7"
+          "i8 . ."
+          ". i9 i9"
+          "i10 i10 i10";
+      }
+    }
+
+    @media only screen and (min-width: 1200px) {
+
+      .splash_wrap p {
+        width: 66%;
+      }
+
+      #main article.img_besk_wrap:first-of-type {
+        height: 100vh;
+      }
+
+      #main {
+        padding: 100px 100px 0 100px;
+      }
+
+      section.layout_section {
+        margin: 0;
+      }
+
+      article {
+        width: 100%;
+        margin-bottom: 200px;
+      }
+
+      .content_wrap {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas:
+          "t t t i1 i1 i1"
+          ". i2 i2 . . ."
+          ". . . i3 i3 i3"
+          "i4 i4 i4 i4 i4 i4"
+          ". . i5 i5 i5 ."
+          "i6 i6 i6 i6 . ."
+          ". . . i7 i7 i7"
+          ". i8 i8 . . ."
+          ". . . i9 i9 i9"
+          "i10 i10 i10 i10 i10 i10";
+      }
+    }
+
+
+    .img_wrapper {
+      overflow: hidden;
+    }
+
+    .img_wrapper img {
+      transform-origin: top;
+      transform: scale(1.4);
+      /*transition: 1s cubic-bezier(0.76, 0, 0.24, 1);*/
+    }
+
+    .img_wrapper .scale_down {
+      transform: scale(1);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+    </nav>
+  </header>
+  <main id="main"></main>
+  <script src="js/menu.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/ScrollToPlugin.min.js"></script>
+  <script src="js/smoothScroll.js"></script>
+  <script src="js/tilbage.js"></script>
+  <script src="js/scrollarrow.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", hentJSON_smykkekurser);
+
+    let N = 0;
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get("id");
+
+    async function hentJSON_smykkekurser() {
+      let wpEnd = `vaerk?_fields=title,aarstal,beskrivelse,img,bg,txt&per_page=10`;
+      const response = await fetch(wp + wpEnd);
+      let json = await response.json();
+
+      json.forEach((t) => {
+        N++;
+
+
+        if (N == id) {
+          let s = document.createElement("section");
+          s.classList.add("layout_section");
+          s.dataset.secnr = N;
+          s.dataset.bg = t.bg;
+          s.dataset.txt = t.txt;
+          s.id = `vaerker_section_${N}`;
+          let content_wrap = document.createElement("div");
+          content_wrap.classList.add("content_wrap");
+          let splash_wrap = document.createElement("div");
+          splash_wrap.classList.add("splash_wrap");
+          let besk_wrap = document.createElement("div");
+          besk_wrap.classList.add("besk_wrap");
+          let aarstal = document.createElement("h4");
+          aarstal.textContent = t.aarstal;
+          let titel = document.createElement("h1");
+          titel.innerHTML = t.title.rendered;
+          document.querySelector("head title").textContent = `Gitte Bjorn - ${t.title.rendered}`;
+          let besk = document.createElement("p");
+          besk.innerHTML = t.beskrivelse;
+          let cta = document.createElement("button");
+          cta.textContent = "tilbage";
+          cta.addEventListener("click", () => {
+            window.history.back();
+          })
+          besk_wrap.appendChild(aarstal);
+          besk_wrap.appendChild(titel);
+          besk_wrap.appendChild(besk);
+          besk_wrap.appendChild(cta);
+          splash_wrap.appendChild(besk_wrap);
+          content_wrap.appendChild(splash_wrap);
+          if (t.img) {
+            t.img.forEach((u) => {
+              let img_besk_wrap = document.createElement("article");
+              img_besk_wrap.classList.add("img_besk_wrap");
+              let img = document.createElement("img");
+              img.src = u.guid;
+              img.alt = u.post_excerpt;
+              let img_wrapper = document.createElement("div");
+              img_wrapper.classList.add("img_wrapper");
+              img_wrapper.appendChild(img);
+              img_besk_wrap.appendChild(img_wrapper);
+              if (u.post_content != u.post_excerpt) {
+                console.log(u.post_content);
+                let p = document.createElement("p");
+                p.textContent = u.post_content;
+                img_besk_wrap.appendChild(p);
+              }
+              content_wrap.appendChild(img_besk_wrap);
+            })
+          }
+          s.appendChild(content_wrap);
+          document.querySelector("#main").appendChild(s);
+
+          document.querySelector("nav").style.background = "#" + t.bg;
+          document.querySelector(".nav_link_wrap").style.background = "#" + t.bg;
+          document.querySelector(".nav_link_wrap ul").style.background = "#" + t.bg;
+          logo.style.fill = "#" + t.txt;
+          burger1_wrap.style.fill = "#" + t.txt;
+          burger2_wrap.style.fill = "#" + t.txt;
+          burger3_wrap.style.fill = "#" + t.txt;
+          document.querySelector("#main").style.background = "#" + t.bg;
+          document.querySelectorAll("*").forEach((s) => {
+            s.style.color = "#" + t.txt;
+          })
+          document.querySelectorAll("button").forEach((s) => {
+            s.style.background = "#" + t.txt;
+            s.style.color = "#" + t.bg;
+          })
+        }
+      })
+
+      scroller();
+    }
+
+    function scroller() {
+      document.querySelectorAll(".img_wrapper").forEach((a) => {
+        let img = a.querySelector("img");
+        var ourScene = new ScrollMagic.Scene({
+            triggerElement: a,
+            duration: "200%",
+            triggerHook: 1
+          })
+          .setTween(
+            gsap.to(img, {
+              y: "-20%",
+              scale: "1.2",
+              ease: "none"
+            })
+          )
+          .addTo(controller)
+      })
+    }
+  </script>
+</body></html>

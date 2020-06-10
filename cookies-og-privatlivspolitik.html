@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="Gitte Bjørn - En side om Cookie- og privatlivspolitik">
+  <title>Gitte Bjorn - Cookies- og privatlivspolitik</title>
+  <link rel="stylesheet" href="css/basestyle.css">
+  <link rel="stylesheet" href="css/tablet.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="https://use.typekit.net/lge2vfw.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+
+  <style>
+    li {
+      list-style-type: none;
+    }
+
+    #cookie_main {
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      margin-top: 40px;
+      line-height: 1.2rem;
+      font-size: 1.3rem;
+    }
+
+
+    @media only screen and (min-width: 600px) {
+      #cookie_main {
+        display: grid;
+        grid-template-columns: 12% auto 20%;
+      }
+
+      #fill {
+        grid-row: 2;
+        grid-column: 2;
+      }
+
+      #overskrift {
+        grid-column: 2;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+  <header>
+    <nav>
+    </nav>
+  </header>
+  <main id="main">
+    <main id="cookie_main">
+      <div id="overskrift">
+        <h1>Cookie- og privatlivspolitik</h1>
+      </div>
+      <main id="fill"></main>
+    </main>
+  </main>
+  <footer id="footer">
+    <div class="footer_info">
+      <h4>Gitte Bjørn Smykkekurser</h4>
+      <p>Prags Boulevard 63C, 2300 København S</p>
+      <a href="mailto:kontakt@gittebjorn.dk">
+        <p>kontakt@gittebjorn.dk</p>
+      </a>
+      <a href="cookies-og-privatlivspolitik.html">
+        <p>Cookie- og privatlivspolitik</p>
+      </a>
+      <div class="footer_img">
+        <img src="img/insta.svg" alt="instagram ikon">
+        <img src="img/fb.svg" alt="facebook ikon">
+        <img src="img/yt.svg" alt="youtube ikon">
+      </div>
+    </div>
+    <div class="footer_logo">
+      <img src="img/gb_logo_svg_w.svg" alt="Gitte Bjørn Logo">
+      <p>KEA MMD 2. sem. eksamen 2020</p>
+    </div>
+  </footer>
+  <script src="js/menu.js"></script>
+  <script src="js/smoothScroll.js"></script>
+  <script src="js/totop.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", hentJSON_cookie);
+
+    async function hentJSON_cookie() {
+      let wpEnd = `pages/55?_fields=content`;
+
+      const response = await fetch(wp + wpEnd);
+      let json = await response.json();
+
+      let cookie = document.createElement("div");
+      cookie.id = "cookie_list";
+      cookie.innerHTML = json.content.rendered;
+      document.querySelector("#fill").appendChild(cookie);
+    }
+
+  </script>
+</body>
+
+</html>

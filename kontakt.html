@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="Gitte Bjørn - Kontakt, her findes relevant kontaktinformation til Gitte Bjørn">
+  <title>Gitte Bjorn - Kontakt</title>
+  <link rel="stylesheet" href="css/basestyle.css">
+  <link rel="stylesheet" href="css/tablet.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="https://use.typekit.net/lge2vfw.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <style>
+    ul {
+      list-style-type: none;
+    }
+
+    iframe {
+      width: 100%;
+    }
+
+    .kontakt_main {
+      padding-bottom: 100px;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+
+    p {
+      line-height: 2.5rem;
+    }
+
+    @media only screen and (min-width: 800px) {
+      .kontakt_main {
+        display: grid;
+      }
+
+      #map {
+        grid-column-start: 3;
+        grid-row-start: 3;
+      }
+
+      #fill {
+        grid-column-start: 1;
+      }
+
+      iframe {
+        width: 400px;
+      }
+    }
+
+    @media only screen and (min-width: 1200px) {
+      iframe {
+        width: 800px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+    </nav>
+  </header>
+  <main id="main">
+    <main class="kontakt_main">
+      <h1>kontakt</h1>
+      <div id="fill"></div>
+      <div id="map">
+        <iframe title="kort over, hvor Gitte Bjørns smykkekurser ligger" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1730.099021309092!2d12.614944395727775!3d55.668989881514385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653accad5cfffff%3A0xfec7ddbf5e11c08b!2sPrags%20Blvd.%2063c%2C%202300%20K%C3%B8benhavn!5e0!3m2!1sda!2sdk!4v1590916970732!5m2!1sda!2sdk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    </main>
+  </main>
+  <footer id="footer">
+    <div class="footer_info">
+      <h4>Gitte Bjørn Smykkekurser</h4>
+      <p>Prags Boulevard 63C, 2300 København S</p>
+      <a href="mailto:kontakt@gittebjorn.dk">
+        <p>kontakt@gittebjorn.dk</p>
+      </a>
+      <a href="cookies-og-privatlivspolitik.html">
+        <p>Cookie- og privatlivspolitik</p>
+      </a>
+      <div class="footer_img">
+        <img src="img/insta.svg" alt="instagram ikon">
+        <img src="img/fb.svg" alt="facebook ikon">
+        <img src="img/yt.svg" alt="youtube ikon">
+      </div>
+    </div>
+    <div class="footer_logo">
+      <img src="img/gb_logo_svg_w.svg" alt="Gitte Bjørn Logo">
+      <p>KEA MMD 2. sem. eksamen 2020</p>
+    </div>
+  </footer>
+  <script src="js/menu.js"></script>
+  <script src="js/smoothScroll.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", hentJSON_kontakt);
+
+    async function hentJSON_kontakt() {
+      let wpEnd = `pages/41?_fields=content`;
+      const response = await fetch(wp + wpEnd);
+      let json = await response.json();
+
+      let text = document.createElement("div");
+      text.id = "text_list";
+      text.innerHTML = json.content.rendered;
+      document.querySelector("#fill").appendChild(text);
+    }
+
+  </script>
+</body>
+
+</html>

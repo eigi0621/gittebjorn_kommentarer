@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="Gitte Bjørn - gå ind på enten gitte bjørn eller smykkekurser, smykke kurser">
+  <title>Gitte Bjorn Smykkekurser</title>
+  <link rel="stylesheet" href="css/basestyle.css">
+  <link rel="stylesheet" href="css/tablet.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="https://use.typekit.net/lge2vfw.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <style>
+    #main {
+      height: 100vh;
+      padding: 40px 0 0 0;
+    }
+
+    .col_wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .col {
+      height: 50%;
+      flex-grow: 1;
+      flex-basis: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .text_wrap {
+      height: 100%;
+      width: 100%;
+      padding: 0 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    #gitte_bjorn_img {
+      background-image: url("http://eigilnikolajsen.dk/kea/10_eksamen/wordpress/wp-content/uploads/2020/06/gitte_bjorn_forside.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #smykkekurser_img {
+      background-image: url("http://eigilnikolajsen.dk/kea/10_eksamen/wordpress/wp-content/uploads/2020/06/smykkekurser_forside.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .text_wrap h1,
+    .text_wrap h4 {
+      color: #fff;
+      text-shadow: 0px 0px 50px #000000;
+    }
+
+    .text_wrap h1 {
+      font-size: 2rem;
+      line-height: 2.3rem;
+    }
+
+    @media only screen and (min-width: 400px) {
+      .text_wrap h1 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
+    }
+
+    @media only screen and (min-width: 600px) {
+      .col {
+        height: 100%;
+      }
+
+      .text_wrap h1 {
+        font-size: 3.5rem;
+        line-height: 4rem;
+      }
+
+      .text_wrap {
+        height: 50%;
+        width: 270px;
+        padding: 0;
+      }
+    }
+
+    @media only screen and (min-width: 900px) {
+
+      .text_wrap h1 {
+        font-size: 4.5rem;
+        line-height: 5rem;
+      }
+
+      .text_wrap {
+        height: 50%;
+        width: 350px;
+      }
+
+      button {
+        margin-top: 30px;
+        font-size: 1.3rem;
+        padding: 10px 15px;
+      }
+    }
+
+    @media only screen and (min-width: 1200px) {
+
+      #gitte_bjorn_img {
+        filter: grayscale(.5) brightness(.8);
+        transition: 1s cubic-bezier(.5, .4, .2, 1);
+      }
+
+      #smykkekurser_img {
+        filter: grayscale(.5) brightness(.8);
+        transition: 1s cubic-bezier(.5, .4, .2, 1);
+      }
+
+      #gitte_bjorn_img:hover {
+        filter: grayscale(0) brightness(1);
+        flex-grow: 1.5;
+      }
+
+      #smykkekurser_img:hover {
+        filter: grayscale(0) brightness(1);
+        flex-grow: 1.5;
+      }
+
+      .text_wrap h1 {
+        font-size: 6rem;
+        line-height: 5.5rem;
+      }
+
+      .text_wrap {
+        height: 50%;
+        width: 500px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+    </nav>
+  </header>
+  <main id="main">
+    <div class="col_wrap">
+      <a id="gitte_bjorn_img" class="col" href="gitte-bjorn.html">
+        <div class="text_wrap">
+          <h1>Gitte Bjørn</h1>
+          <h4>Professionel guldsmed og kunstner, se mine værker og lær om mig her</h4>
+          <button>Undersøg mine værker</button>
+        </div>
+      </a>
+      <a id="smykkekurser_img" class="col" href="smykkekurser.html">
+        <div class="text_wrap">
+          <h1>Smykke&shy;kurser</h1>
+          <h4>Undersøg og tilmeld dig Danmarks bedste ikke-kompetencegivende smykkekurser her</h4>
+          <button>Se smykkekurserne</button>
+        </div>
+      </a>
+    </div>
+  </main>
+  <footer id="footer">
+    <div class="footer_info">
+      <h4>Gitte Bjørn Smykkekurser</h4>
+      <p>Prags Boulevard 63C, 2300 København S</p>
+      <a href="mailto:kontakt@gittebjorn.dk">
+        <p>kontakt@gittebjorn.dk</p>
+      </a>
+      <a href="cookies-og-privatlivspolitik.html">
+        <p>Cookie- og privatlivspolitik</p>
+      </a>
+      <div class="footer_img">
+        <img src="img/insta.svg" alt="instagram ikon">
+        <img src="img/fb.svg" alt="facebook ikon">
+        <img src="img/yt.svg" alt="youtube ikon">
+      </div>
+    </div>
+    <div class="footer_logo">
+      <img src="img/gb_logo_svg_w.svg" alt="Gitte Bjørn Logo">
+      <p>KEA MMD 2. sem. eksamen 2020</p>
+    </div>
+  </footer>
+  <script src="js/menu.js"></script>
+  <script src="js/smoothScroll.js"></script>
+</body>
+
+</html>
