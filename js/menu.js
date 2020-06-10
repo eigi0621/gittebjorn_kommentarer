@@ -91,7 +91,8 @@ nav.appendChild(burger_wrap);
 var ul = document.createElement("ul");
 smykkekurser.appendChild(ul);
 
-
+//boolean der ændres, hvis burgermenuen klikkes på
+//og som definerer, hvilke transitions der vises
 let burgerOn = false;
 
 //ved klik på burgermenu, toggle classes, der giver css animation
