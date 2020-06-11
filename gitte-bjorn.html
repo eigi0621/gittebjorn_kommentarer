@@ -2,1074 +2,1071 @@
 <html lang="da">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="Description" content="Gitte Bjørn - Om smykkekurserne, en side der fortæller om smykkerkurserne">
-  <title>Gitte Bjorn - Værker</title>
-  <link rel="stylesheet" href="css/basestyle.css">
-  <link rel="stylesheet" href="css/tablet.css">
-  <link rel="stylesheet" href="css/desktop.css">
-  <link rel="stylesheet" href="https://use.typekit.net/lge2vfw.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="img/favicon/site.webmanifest">
-  <style>
-    .splash_col_wrap {
-      width: 100vw;
-      position: relative;
-      top: -30px;
-      left: -30px;
-      display: flex;
-      flex-wrap: wrap-reverse;
-      overflow: hidden;
-    }
-
-    .splash_col {
-      flex-grow: 1;
-      flex-basis: 400px;
-    }
-
-    figure.splash_col {
-      min-height: 400px;
-    }
-
-    div.splash_col {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      padding: 5%;
-    }
-
-    #gitte_img {
-      width: 100%;
-      height: 100%;
-      background-image: url("http://eigilnikolajsen.dk/kea/10_eksamen/wordpress/wp-content/uploads/2020/06/gitte_bjorn_forside.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-
-    .besk_wrap {
-      margin: 0;
-    }
-
-    section.layout_section img {
-      margin: 30px 0;
-    }
-
-    #content_list {}
-
-    #content_list li {
-      list-style: none;
-      cursor: pointer;
-      line-height: 0;
-      display: block;
-    }
-
-    #content_list li p {
-      width: max-content;
-      font-size: .7rem;
-      font-weight: 400;
-      font-style: normal;
-      letter-spacing: .05rem;
-      text-transform: uppercase;
-      padding: 15px;
-      overflow: hidden;
-      position: relative;
-      z-index: 3;
-      transition: .7s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-
-    #content_list li p:hover {
-      letter-spacing: .07rem;
-    }
-
-    #content_list_wrap {
-      height: 100%;
-    }
-
-    #list_overlay {
-      width: calc(100% + 10px);
-      height: 30px;
-      background: #fff;
-      margin: 0 0 -38px -10px;
-      padding: 10px;
-      position: relative;
-      z-index: 2;
-    }
-
-    #fill_wrap {
-      display: grid;
-      grid-template-rows: repeat(2, auto);
-      grid-template-areas: "cl"
-        "fill";
-    }
-
-    #cv_list p {
-      font-size: .9rem;
-    }
-
-    #se_kontakt {
-      background: #64665D;
-    }
-
-    #content_list {
-      grid-area: cl;
-    }
-
-    #fill {
-      grid-area: fill;
-      overflow: hidden;
-    }
-
-    .layout_section button {
-      width: auto;
-      display: block;
-      margin-top: 30px;
-      font-size: 1rem;
-      letter-spacing: .3rem;
-    }
-
-    section.layout_section h3 {
-      margin: .3rem 0 1rem 0;
-    }
-
-    section.layout_section:nth-child(7n+1) .content_wrap {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-areas: "i"
-        "t"
-        "i2";
-    }
-
-    section.layout_section:nth-child(7n+1) .content_wrap .besk_wrap {
-      grid-area: t;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(1) {
-      grid-area: i;
-    }
-
-    section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(2) {
-      grid-area: i2;
-      width: 66%;
-    }
-
-
-
-    section.layout_section:nth-child(7n+2) .content_wrap {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-areas: "i"
-        "t";
-    }
-
-    section.layout_section:nth-child(7n+2) .content_wrap .besk_wrap {
-      grid-area: t;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-
-    section.layout_section:nth-child(7n+2) .content_wrap img {
-      grid-area: i;
-    }
-
-
-
-    section.layout_section:nth-child(7n+3) .content_wrap {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-areas: "t"
-        "i";
-    }
-
-    section.layout_section:nth-child(7n+3) .content_wrap .besk_wrap {
-      grid-area: t;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    section.layout_section:nth-child(7n+3) .content_wrap img {
-      grid-area: i;
-    }
-
-
-
-    section.layout_section:nth-child(7n+4) .content_wrap {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-areas: "i"
-        "t"
-        "i2";
-    }
-
-    section.layout_section:nth-child(7n+4) .content_wrap .besk_wrap {
-      grid-area: t;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(1) {
-      grid-area: i;
-    }
-
-    section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(2) {
-      grid-area: i2;
-      width: 66%;
-    }
-
-
-
-    section.layout_section:nth-child(7n+5) .content_wrap {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-areas: "t"
-        "i"
-    }
-
-    section.layout_section:nth-child(7n+5) .content_wrap .besk_wrap {
-      grid-area: t;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    section.layout_section:nth-child(7n+5) .content_wrap img {
-      grid-area: i;
-    }
-
-
-
-    section.layout_section:nth-child(7n+6) .content_wrap {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-areas: "i"
-        "t";
-    }
-
-    section.layout_section:nth-child(7n+6) .content_wrap .besk_wrap {
-      grid-area: t;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-
-    section.layout_section:nth-child(7n+6) .content_wrap img {
-      grid-area: i;
-    }
-
-
-
-    section.layout_section:nth-child(7n+7) .content_wrap {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-areas: "t"
-        "i";
-    }
-
-    section.layout_section:nth-child(7n+7) .content_wrap .besk_wrap {
-      grid-area: t;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    section.layout_section:nth-child(7n+7) .content_wrap img {
-      grid-area: i;
-    }
-
-    @media only screen and (min-width: 800px) {
-      .scroll_pos {
-        justify-content: flex-end;
-      }
-
-      #cv_list p {
-        font-size: 1rem;
-      }
-
-      #content_list li:last-child p {
-        margin-bottom: 100px;
-      }
-
-      .splash_col_wrap {
-        top: -100px;
-        left: -30px;
-      }
-
-      #fill_wrap {
-        display: grid;
-        grid-template-rows: repeat(2, auto);
-        grid-template-areas: "cl"
-          "fill";
-      }
-
-      #content_list {
-        grid-area: cl;
-      }
-
-      #fill {
-        grid-area: fill;
-        overflow: hidden;
-      }
-
-      section.layout_section:nth-child(7n+1) .content_wrap {
-        display: grid;
-        grid-column-gap: 30px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2);
-        grid-template-areas: "t i i"
-          "i2 . .";
-      }
-
-      section.layout_section:nth-child(7n+1) .content_wrap .besk_wrap {
-        grid-area: t;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(1) {
-        grid-area: i;
-      }
-
-      section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(2) {
-        grid-area: i2;
-        width: 100%;
-      }
-
-
-
-      section.layout_section:nth-child(7n+2) .content_wrap {
-        display: grid;
-        grid-column-gap: 30px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2);
-        grid-template-areas: "i i ."
-          ". t t";
-      }
-
-      section.layout_section:nth-child(7n+2) .content_wrap .besk_wrap {
-        grid-area: t;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-      }
-
-      section.layout_section:nth-child(7n+2) .content_wrap img {
-        grid-area: i;
-      }
-
-
-
-      section.layout_section:nth-child(7n+3) .content_wrap {
-        display: grid;
-        grid-column-gap: 30px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "t i i";
-      }
-
-      section.layout_section:nth-child(7n+3) .content_wrap .besk_wrap {
-        grid-area: t;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      section.layout_section:nth-child(7n+3) .content_wrap img {
-        grid-area: i;
-      }
-
-
-
-      section.layout_section:nth-child(7n+4) .content_wrap {
-        display: grid;
-        grid-column-gap: 30px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "i i t"
-          ". . i2";
-      }
-
-      section.layout_section:nth-child(7n+4) .content_wrap .besk_wrap {
-        grid-area: t;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-      }
-
-      section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(1) {
-        grid-area: i;
-      }
-
-      section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(2) {
-        grid-area: i2;
-        width: 100%;
-      }
-
-
-
-      section.layout_section:nth-child(7n+5) .content_wrap {
-        display: grid;
-        grid-column-gap: 30px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2);
-        grid-template-areas: ". t t"
-          "i i i";
-      }
-
-      section.layout_section:nth-child(7n+5) .content_wrap .besk_wrap {
-        grid-area: t;
-      }
-
-      section.layout_section:nth-child(7n+5) .content_wrap img {
-        grid-area: i;
-      }
-
-
-
-      section.layout_section:nth-child(7n+6) .content_wrap {
-        display: grid;
-        grid-column-gap: 30px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: ". i i"
-          "t t .";
-      }
-
-      section.layout_section:nth-child(7n+6) .content_wrap .besk_wrap {
-        grid-area: t;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-      }
-
-      section.layout_section:nth-child(7n+6) .content_wrap img {
-        grid-area: i;
-      }
-
-
-
-      section.layout_section:nth-child(7n+7) .content_wrap {
-        display: grid;
-        grid-column-gap: 30px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "i i t";
-      }
-
-      section.layout_section:nth-child(7n+7) .content_wrap .besk_wrap {
-        grid-area: t;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      section.layout_section:nth-child(7n+7) .content_wrap img {
-        grid-area: i;
-      }
-    }
-
-    @media only screen and (min-width: 1200px) {
-
-      #cv_list p {
-        font-size: 1.1rem;
-      }
-
-      .splash_col_wrap {
-        top: -100px;
-        left: -100px;
-      }
-
-      #fill_wrap {
-        display: grid;
-        grid-column-gap: 30px;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-areas: "cl fill fill fill fill fill"
-          "cv cv cv cv cv cv";
-      }
-
-      #cv_list {
-        grid-area: cv;
-      }
-
-      #content_list {
-        grid-area: cl;
-      }
-
-      #fill {
-        grid-area: fill;
-        overflow: hidden;
-      }
-
-      section.layout_section:nth-child(7n+1) .content_wrap {
-        display: grid;
-        grid-column-gap: 30px;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(2);
-        grid-template-areas:
-          ". t t i i"
-          "i2 i2 . . .";
-      }
-
-      section.layout_section:nth-child(7n+1) .content_wrap .besk_wrap {
-        grid-area: t;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(1) {
-        grid-area: i;
-      }
-
-      section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(2) {
-        grid-area: i2;
-      }
-
-
-
-      section.layout_section:nth-child(7n+2) .content_wrap {
-        display: grid;
-        grid-column-gap: 30px;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(2);
-        grid-template-areas:
-          "i i i . ."
-          ". . t t .";
-      }
-
-      section.layout_section:nth-child(7n+2) .content_wrap .besk_wrap {
-        grid-area: t;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-      }
-
-      section.layout_section:nth-child(7n+2) .content_wrap img {
-        grid-area: i;
-      }
-
-
-
-      section.layout_section:nth-child(7n+3) .content_wrap {
-        display: grid;
-        grid-column-gap: 30px;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-areas: "t t i i i";
-      }
-
-      section.layout_section:nth-child(7n+3) .content_wrap .besk_wrap {
-        grid-area: t;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      section.layout_section:nth-child(7n+3) .content_wrap img {
-        grid-area: i;
-      }
-
-
-
-      section.layout_section:nth-child(7n+4) .content_wrap {
-        display: grid;
-        grid-column-gap: 30px;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(2);
-        grid-template-areas: "i i t t ."
-          ". . . i2 i2";
-      }
-
-      section.layout_section:nth-child(7n+4) .content_wrap .besk_wrap {
-        grid-area: t;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-      }
-
-      section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(1) {
-        grid-area: i;
-      }
-
-      section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(2) {
-        grid-area: i2;
-      }
-
-
-
-      section.layout_section:nth-child(7n+5) .content_wrap {
-        display: grid;
-        grid-column-gap: 30px;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(2);
-        grid-template-areas: ". . t t ."
-          "i i i i .";
-      }
-
-      section.layout_section:nth-child(7n+5) .content_wrap .besk_wrap {
-        grid-area: t;
-      }
-
-      section.layout_section:nth-child(7n+5) .content_wrap img {
-        grid-area: i;
-      }
-
-
-
-      section.layout_section:nth-child(7n+6) .content_wrap {
-        display: grid;
-        grid-column-gap: 30px;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(2);
-        grid-template-areas: ". . i i i"
-          ". t t . .";
-      }
-
-      section.layout_section:nth-child(7n+6) .content_wrap .besk_wrap {
-        grid-area: t;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-      }
-
-      section.layout_section:nth-child(7n+6) .content_wrap img {
-        grid-area: i;
-      }
-
-
-
-      section.layout_section:nth-child(7n+7) .content_wrap {
-        display: grid;
-        grid-column-gap: 30px;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-areas: "i i i t t";
-      }
-
-      section.layout_section:nth-child(7n+7) .content_wrap .besk_wrap {
-        grid-area: t;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      section.layout_section:nth-child(7n+7) .content_wrap img {
-        grid-area: i;
-      }
-    }
-
-  </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="Description" content="Gitte Bjørn - Om smykkekurserne, en side der fortæller om smykkerkurserne">
+	<title>Gitte Bjorn - Værker</title>
+	<link rel="stylesheet" href="css/basestyle.css">
+	<link rel="stylesheet" href="css/tablet.css">
+	<link rel="stylesheet" href="css/desktop.css">
+	<link rel="stylesheet" href="https://use.typekit.net/lge2vfw.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<style>
+		.splash_col_wrap {
+			width: 100vw;
+			position: relative;
+			top: -30px;
+			left: -30px;
+			display: flex;
+			flex-wrap: wrap-reverse;
+			overflow: hidden;
+		}
+
+		.splash_col {
+			flex-grow: 1;
+			flex-basis: 400px;
+		}
+
+		figure.splash_col {
+			min-height: 400px;
+		}
+
+		div.splash_col {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			padding: 5%;
+		}
+
+		#gitte_img {
+			width: 100%;
+			height: 100%;
+			background-image: url("http://eigilnikolajsen.dk/kea/10_eksamen/wordpress/wp-content/uploads/2020/06/gitte_bjorn_forside.jpg");
+			background-size: cover;
+			background-position: center;
+		}
+
+		.besk_wrap {
+			margin: 0;
+		}
+
+		section.layout_section img {
+			margin: 30px 0;
+		}
+
+		#content_list {}
+
+		#content_list li {
+			list-style: none;
+			cursor: pointer;
+			line-height: 0;
+			display: block;
+		}
+
+		#content_list li p {
+			width: max-content;
+			font-size: .7rem;
+			font-weight: 400;
+			font-style: normal;
+			letter-spacing: .05rem;
+			text-transform: uppercase;
+			padding: 15px;
+			overflow: hidden;
+			position: relative;
+			z-index: 3;
+			transition: .7s cubic-bezier(0.25, 1, 0.5, 1);
+		}
+
+		#content_list li p:hover {
+			letter-spacing: .07rem;
+		}
+
+		#content_list_wrap {
+			height: 100%;
+		}
+
+		#list_overlay {
+			width: calc(100% + 10px);
+			height: 30px;
+			background: #fff;
+			margin: 0 0 -38px -10px;
+			padding: 10px;
+			position: relative;
+			z-index: 2;
+		}
+
+		#fill_wrap {
+			display: grid;
+			grid-template-rows: repeat(2, auto);
+			grid-template-areas: "cl"
+				"fill";
+		}
+
+		#cv_list p {
+			font-size: .9rem;
+		}
+
+		#se_kontakt {
+			background: #64665D;
+		}
+
+		#content_list {
+			grid-area: cl;
+		}
+
+		#fill {
+			grid-area: fill;
+			overflow: hidden;
+		}
+
+		.layout_section button {
+			width: auto;
+			display: block;
+			margin-top: 30px;
+			font-size: 1rem;
+			letter-spacing: .3rem;
+		}
+
+		section.layout_section h3 {
+			margin: .3rem 0 1rem 0;
+		}
+
+		section.layout_section:nth-child(7n+1) .content_wrap {
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-areas: "i"
+				"t"
+				"i2";
+		}
+
+		section.layout_section:nth-child(7n+1) .content_wrap .besk_wrap {
+			grid-area: t;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(1) {
+			grid-area: i;
+		}
+
+		section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(2) {
+			grid-area: i2;
+			width: 66%;
+		}
+
+
+
+		section.layout_section:nth-child(7n+2) .content_wrap {
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-areas: "i"
+				"t";
+		}
+
+		section.layout_section:nth-child(7n+2) .content_wrap .besk_wrap {
+			grid-area: t;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+
+		section.layout_section:nth-child(7n+2) .content_wrap img {
+			grid-area: i;
+		}
+
+
+
+		section.layout_section:nth-child(7n+3) .content_wrap {
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-areas: "t"
+				"i";
+		}
+
+		section.layout_section:nth-child(7n+3) .content_wrap .besk_wrap {
+			grid-area: t;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		section.layout_section:nth-child(7n+3) .content_wrap img {
+			grid-area: i;
+		}
+
+
+
+		section.layout_section:nth-child(7n+4) .content_wrap {
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-areas: "i"
+				"t"
+				"i2";
+		}
+
+		section.layout_section:nth-child(7n+4) .content_wrap .besk_wrap {
+			grid-area: t;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(1) {
+			grid-area: i;
+		}
+
+		section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(2) {
+			grid-area: i2;
+			width: 66%;
+		}
+
+
+
+		section.layout_section:nth-child(7n+5) .content_wrap {
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-areas: "t"
+				"i"
+		}
+
+		section.layout_section:nth-child(7n+5) .content_wrap .besk_wrap {
+			grid-area: t;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		section.layout_section:nth-child(7n+5) .content_wrap img {
+			grid-area: i;
+		}
+
+
+
+		section.layout_section:nth-child(7n+6) .content_wrap {
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-areas: "i"
+				"t";
+		}
+
+		section.layout_section:nth-child(7n+6) .content_wrap .besk_wrap {
+			grid-area: t;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+
+		section.layout_section:nth-child(7n+6) .content_wrap img {
+			grid-area: i;
+		}
+
+
+
+		section.layout_section:nth-child(7n+7) .content_wrap {
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			grid-template-areas: "t"
+				"i";
+		}
+
+		section.layout_section:nth-child(7n+7) .content_wrap .besk_wrap {
+			grid-area: t;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		section.layout_section:nth-child(7n+7) .content_wrap img {
+			grid-area: i;
+		}
+
+		@media only screen and (min-width: 800px) {
+			.scroll_pos {
+				justify-content: flex-end;
+			}
+
+			#cv_list p {
+				font-size: 1rem;
+			}
+
+			#content_list li:last-child p {
+				margin-bottom: 100px;
+			}
+
+			.splash_col_wrap {
+				top: -100px;
+				left: -30px;
+			}
+
+			#fill_wrap {
+				display: grid;
+				grid-template-rows: repeat(2, auto);
+				grid-template-areas: "cl"
+					"fill";
+			}
+
+			#content_list {
+				grid-area: cl;
+			}
+
+			#fill {
+				grid-area: fill;
+				overflow: hidden;
+			}
+
+			section.layout_section:nth-child(7n+1) .content_wrap {
+				display: grid;
+				grid-column-gap: 30px;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: repeat(2);
+				grid-template-areas: "t i i"
+					"i2 . .";
+			}
+
+			section.layout_section:nth-child(7n+1) .content_wrap .besk_wrap {
+				grid-area: t;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(1) {
+				grid-area: i;
+			}
+
+			section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(2) {
+				grid-area: i2;
+				width: 100%;
+			}
+
+
+
+			section.layout_section:nth-child(7n+2) .content_wrap {
+				display: grid;
+				grid-column-gap: 30px;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: repeat(2);
+				grid-template-areas: "i i ."
+					". t t";
+			}
+
+			section.layout_section:nth-child(7n+2) .content_wrap .besk_wrap {
+				grid-area: t;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+			}
+
+			section.layout_section:nth-child(7n+2) .content_wrap img {
+				grid-area: i;
+			}
+
+
+
+			section.layout_section:nth-child(7n+3) .content_wrap {
+				display: grid;
+				grid-column-gap: 30px;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-areas: "t i i";
+			}
+
+			section.layout_section:nth-child(7n+3) .content_wrap .besk_wrap {
+				grid-area: t;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			section.layout_section:nth-child(7n+3) .content_wrap img {
+				grid-area: i;
+			}
+
+
+
+			section.layout_section:nth-child(7n+4) .content_wrap {
+				display: grid;
+				grid-column-gap: 30px;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-areas: "i i t"
+					". . i2";
+			}
+
+			section.layout_section:nth-child(7n+4) .content_wrap .besk_wrap {
+				grid-area: t;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-end;
+			}
+
+			section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(1) {
+				grid-area: i;
+			}
+
+			section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(2) {
+				grid-area: i2;
+				width: 100%;
+			}
+
+
+
+			section.layout_section:nth-child(7n+5) .content_wrap {
+				display: grid;
+				grid-column-gap: 30px;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: repeat(2);
+				grid-template-areas: ". t t"
+					"i i i";
+			}
+
+			section.layout_section:nth-child(7n+5) .content_wrap .besk_wrap {
+				grid-area: t;
+			}
+
+			section.layout_section:nth-child(7n+5) .content_wrap img {
+				grid-area: i;
+			}
+
+
+
+			section.layout_section:nth-child(7n+6) .content_wrap {
+				display: grid;
+				grid-column-gap: 30px;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-areas: ". i i"
+					"t t .";
+			}
+
+			section.layout_section:nth-child(7n+6) .content_wrap .besk_wrap {
+				grid-area: t;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+			}
+
+			section.layout_section:nth-child(7n+6) .content_wrap img {
+				grid-area: i;
+			}
+
+
+
+			section.layout_section:nth-child(7n+7) .content_wrap {
+				display: grid;
+				grid-column-gap: 30px;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-areas: "i i t";
+			}
+
+			section.layout_section:nth-child(7n+7) .content_wrap .besk_wrap {
+				grid-area: t;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			section.layout_section:nth-child(7n+7) .content_wrap img {
+				grid-area: i;
+			}
+		}
+
+		@media only screen and (min-width: 1200px) {
+
+			#cv_list p {
+				font-size: 1.1rem;
+			}
+
+			.splash_col_wrap {
+				top: -100px;
+				left: -100px;
+			}
+
+			#fill_wrap {
+				display: grid;
+				grid-column-gap: 30px;
+				grid-template-columns: repeat(6, 1fr);
+				grid-template-areas: "cl fill fill fill fill fill"
+					"cv cv cv cv cv cv";
+			}
+
+			#cv_list {
+				grid-area: cv;
+			}
+
+			#content_list {
+				grid-area: cl;
+			}
+
+			#fill {
+				grid-area: fill;
+				overflow: hidden;
+			}
+
+			section.layout_section:nth-child(7n+1) .content_wrap {
+				display: grid;
+				grid-column-gap: 30px;
+				grid-template-columns: repeat(5, 1fr);
+				grid-template-rows: repeat(2);
+				grid-template-areas:
+					". t t i i"
+					"i2 i2 . . .";
+			}
+
+			section.layout_section:nth-child(7n+1) .content_wrap .besk_wrap {
+				grid-area: t;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(1) {
+				grid-area: i;
+			}
+
+			section.layout_section:nth-child(7n+1) .content_wrap img:nth-of-type(2) {
+				grid-area: i2;
+			}
+
+
+
+			section.layout_section:nth-child(7n+2) .content_wrap {
+				display: grid;
+				grid-column-gap: 30px;
+				grid-template-columns: repeat(5, 1fr);
+				grid-template-rows: repeat(2);
+				grid-template-areas:
+					"i i i . ."
+					". . t t .";
+			}
+
+			section.layout_section:nth-child(7n+2) .content_wrap .besk_wrap {
+				grid-area: t;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+			}
+
+			section.layout_section:nth-child(7n+2) .content_wrap img {
+				grid-area: i;
+			}
+
+
+
+			section.layout_section:nth-child(7n+3) .content_wrap {
+				display: grid;
+				grid-column-gap: 30px;
+				grid-template-columns: repeat(5, 1fr);
+				grid-template-areas: "t t i i i";
+			}
+
+			section.layout_section:nth-child(7n+3) .content_wrap .besk_wrap {
+				grid-area: t;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			section.layout_section:nth-child(7n+3) .content_wrap img {
+				grid-area: i;
+			}
+
+
+
+			section.layout_section:nth-child(7n+4) .content_wrap {
+				display: grid;
+				grid-column-gap: 30px;
+				grid-template-columns: repeat(5, 1fr);
+				grid-template-rows: repeat(2);
+				grid-template-areas: "i i t t ."
+					". . . i2 i2";
+			}
+
+			section.layout_section:nth-child(7n+4) .content_wrap .besk_wrap {
+				grid-area: t;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-end;
+			}
+
+			section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(1) {
+				grid-area: i;
+			}
+
+			section.layout_section:nth-child(7n+4) .content_wrap img:nth-of-type(2) {
+				grid-area: i2;
+			}
+
+
+
+			section.layout_section:nth-child(7n+5) .content_wrap {
+				display: grid;
+				grid-column-gap: 30px;
+				grid-template-columns: repeat(5, 1fr);
+				grid-template-rows: repeat(2);
+				grid-template-areas: ". . t t ."
+					"i i i i .";
+			}
+
+			section.layout_section:nth-child(7n+5) .content_wrap .besk_wrap {
+				grid-area: t;
+			}
+
+			section.layout_section:nth-child(7n+5) .content_wrap img {
+				grid-area: i;
+			}
+
+
+
+			section.layout_section:nth-child(7n+6) .content_wrap {
+				display: grid;
+				grid-column-gap: 30px;
+				grid-template-columns: repeat(5, 1fr);
+				grid-template-rows: repeat(2);
+				grid-template-areas: ". . i i i"
+					". t t . .";
+			}
+
+			section.layout_section:nth-child(7n+6) .content_wrap .besk_wrap {
+				grid-area: t;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+			}
+
+			section.layout_section:nth-child(7n+6) .content_wrap img {
+				grid-area: i;
+			}
+
+
+
+			section.layout_section:nth-child(7n+7) .content_wrap {
+				display: grid;
+				grid-column-gap: 30px;
+				grid-template-columns: repeat(5, 1fr);
+				grid-template-areas: "i i i t t";
+			}
+
+			section.layout_section:nth-child(7n+7) .content_wrap .besk_wrap {
+				grid-area: t;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			section.layout_section:nth-child(7n+7) .content_wrap img {
+				grid-area: i;
+			}
+		}
+	</style>
 </head>
 
 <body>
-  <header>
-    <nav>
-    </nav>
-  </header>
-  <main id="main">
-    <div class="splash_col_wrap">
-      <figure class="img_wrap splash_col">
-        <div id="gitte_img"></div>
-      </figure>
-      <div class="splash_col">
-        <h1>Gitte Bjørn</h1>
-        <p>Mit kreative arbejde er tæt forbundet med kroppen. Da jeg startede i 1993 fyldte smykkerne mest i mit univers. I dag lægger jeg langt det meste af min energi i at skabe objekter og korpusarbejder.
-          Fælles for mine værker på tværs af genrer, teknikker og temaer er kærligheden til at forme i metal.
-          Jeg arbejder fokuseret mod en soloudstilling med et fast tema, der også styrer prioriteringen af min arbejdsindsats.</p>
-        <button id="se_va">Gitte Bjørns værker</button>
-        <button id="se_cv">Gitte Bjørns CV</button>
-        <a href="kontakt.html">
-          <button id="se_kontakt">Kontakt</button>
-        </a>
-      </div>
-    </div>
-    <div id="fill_wrap">
-      <!--    Alle værker-->
-      <div id="content_list_wrap">
-        <ul id="content_list">
-          <!--       Menuen ude i siden  -->
-        </ul>
-      </div>
-      <div id="fill"></div>
-    </div>
-  </main>
-  <footer id="footer">
-    <div class="footer_info">
-      <h4>Gitte Bjørn Smykkekurser</h4>
-      <p>Prags Boulevard 63C, 2300 København S</p>
-      <a href="mailto:kontakt@gittebjorn.dk">
-        <p>kontakt@gittebjorn.dk</p>
-      </a>
-      <a href="cookies-og-privatlivspolitik.html">
-        <p>Cookie- og privatlivspolitik</p>
-      </a>
-      <div class="footer_img">
-        <img src="img/insta.svg" alt="instagram ikon">
-        <img src="img/fb.svg" alt="facebook ikon">
-        <img src="img/yt.svg" alt="youtube ikon">
-      </div>
-    </div>
-    <div class="footer_logo">
-      <img src="img/gb_logo_svg_w.svg" alt="Gitte Bjørn Logo">
-      <p>KEA MMD 2. sem. eksamen 2020</p>
-    </div>
-  </footer>
-  <!--Vores menu script-->
-  <script src="js/menu.js"></script>
+	<header>
+		<nav>
+		</nav>
+	</header>
+	<main id="main">
+		<div class="splash_col_wrap">
+			<figure class="img_wrap splash_col">
+				<div id="gitte_img"></div>
+			</figure>
+			<div class="splash_col">
+				<h1>Gitte Bjørn</h1>
+				<p>Mit kreative arbejde er tæt forbundet med kroppen. Da jeg startede i 1993 fyldte smykkerne mest i mit univers. I dag lægger jeg langt det meste af min energi i at skabe objekter og korpusarbejder.
+					Fælles for mine værker på tværs af genrer, teknikker og temaer er kærligheden til at forme i metal.
+					Jeg arbejder fokuseret mod en soloudstilling med et fast tema, der også styrer prioriteringen af min arbejdsindsats.</p>
+				<button id="se_va">Gitte Bjørns værker</button>
+				<button id="se_cv">Gitte Bjørns CV</button>
+				<a href="kontakt.html">
+					<button id="se_kontakt">Kontakt</button>
+				</a>
+			</div>
+		</div>
+		<div id="fill_wrap">
+			<!--    Alle værker-->
+			<div id="content_list_wrap">
+				<ul id="content_list">
+					<!--       Menuen ude i siden  -->
+				</ul>
+			</div>
+			<div id="fill"></div>
+		</div>
+	</main>
+	<footer id="footer">
+		<div class="footer_info">
+			<h4>Gitte Bjørn Smykkekurser</h4>
+			<p>Prags Boulevard 63C, 2300 København S</p>
+			<a href="mailto:kontakt@gittebjorn.dk">
+				<p>kontakt@gittebjorn.dk</p>
+			</a>
+			<a href="cookies-og-privatlivspolitik.html">
+				<p>Cookie- og privatlivspolitik</p>
+			</a>
+			<div class="footer_img">
+				<img src="img/insta.svg" alt="instagram ikon">
+				<img src="img/fb.svg" alt="facebook ikon">
+				<img src="img/yt.svg" alt="youtube ikon">
+			</div>
+		</div>
+		<div class="footer_logo">
+			<img src="img/gb_logo_svg_w.svg" alt="Gitte Bjørn Logo">
+			<p>KEA MMD 2. sem. eksamen 2020</p>
+		</div>
+	</footer>
+	<!--Vores menu script-->
+	<script src="js/menu.js"></script>
 
-  <!--ScrollMagic hjælper med at styre animationer ved scroll (bruges fx ved gittebjorn.html)-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+	<!--ScrollMagic hjælper med at styre animationer ved scroll (bruges fx ved gittebjorn.html)-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 
-  <!--ScrollMagic debug hjælper med at opklare, hvorfor Scroll animationer ikke virker (ved at sætte indikatorer)-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+	<!--ScrollMagic debug hjælper med at opklare, hvorfor Scroll animationer ikke virker (ved at sætte indikatorer)-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 
-  <!--Gør at ScrollMagic kan bruges med GSAP-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+	<!--Gør at ScrollMagic kan bruges med GSAP-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
 
-  <!--GSAP - Et JavaScript animationsbibliotek (bruges fx ved gittebjorn.html til at skifte farver)-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+	<!--GSAP - Et JavaScript animationsbibliotek (bruges fx ved gittebjorn.html til at skifte farver)-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 
-  <!--Plugin til GSAP, der gør at man kan scrolle til et bestemt sted på siden (bruges fx ved til top pilen)-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/ScrollToPlugin.min.js"></script>
+	<!--Plugin til GSAP, der gør at man kan scrolle til et bestemt sted på siden (bruges fx ved til top pilen)-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/ScrollToPlugin.min.js"></script>
 
-  <!--Giver en blødere scrollfornemmelse på desktop-->
-  <script src="js/smoothScroll.js"></script>
+	<!--Giver en blødere scrollfornemmelse på desktop-->
+	<script src="js/smoothScroll.js"></script>
 
-  <!--Placer til toppen pil på siden-->
-  <script src="js/totop.js"></script>
+	<!--Placer til toppen pil på siden-->
+	<script src="js/totop.js"></script>
 
-  <!--Placer til scroll ned indikator på siden-->
-  <script src="js/scrollarrow.js"></script>
-  <!--inline script starter her-->
-  <script>
-    //async function der henter Gitte Bjørns CV
-    async function hentJSON_smykkekurser_splash() {
-      let wpEnd = `pages/29?_fields=content`;
-      const response = await fetch(wp + wpEnd);
-      let json = await response.json();
+	<!--Placer til scroll ned indikator på siden-->
+	<script src="js/scrollarrow.js"></script>
+	<!--inline script starter her-->
+	<script>
+		//async function der henter Gitte Bjørns CV
+		async function hentJSON_smykkekurser_splash() {
+			let wpEnd = `pages/29?_fields=content`;
+			const response = await fetch(wp + wpEnd);
+			let json = await response.json();
 
-      let cv = document.createElement("div"); //byg cv container
-      cv.id = "cv_list"; //giv den en ID
-      cv.innerHTML = json.content.rendered; //fyld med content fra WP
-      document.querySelector("#fill_wrap").appendChild(cv); //sæt ind i HTML
+			let cv = document.createElement("div"); //byg cv container
+			cv.id = "cv_list"; //giv den en ID
+			cv.innerHTML = json.content.rendered; //fyld med content fra WP
+			document.querySelector("#fill_wrap").appendChild(cv); //sæt ind i HTML
 
-      //ved klik på knappen SE SV
-      document.querySelector("#se_cv").addEventListener("click", () => {
-        //brug GSAP og ScrollToPlugin til at scrolle ned
-        gsap.to(window, {
-          duration: 1, //på 1 sek
-          scrollTo: ".cv_group", //til CV
-          ease: "power3.inOut" //med easing power3.out
-        })
-      })
-      //samme som ovenfor bare til første værk
-      document.querySelector("#se_va").addEventListener("click", () => {
-        gsap.to(window, {
-          duration: 1,
-          scrollTo: ".layout_section:first-of-type",
-          ease: "power3.inOut"
-        })
-      })
+			//ved klik på knappen SE SV
+			document.querySelector("#se_cv").addEventListener("click", () => {
+				//brug GSAP og ScrollToPlugin til at scrolle ned
+				gsap.to(window, {
+					duration: 1, //på 1 sek
+					scrollTo: ".cv_group", //til CV
+					ease: "power3.inOut" //med easing power3.out
+				})
+			})
+			//samme som ovenfor bare til første værk
+			document.querySelector("#se_va").addEventListener("click", () => {
+				gsap.to(window, {
+					duration: 1,
+					scrollTo: ".layout_section:first-of-type",
+					ease: "power3.inOut"
+				})
+			})
 
-      //kald scroller (funktionen, der gør at siden skifter farve ved scroll)
-      setTimeout(scroller, 100);
-    }
+			//kald scroller (funktionen, der gør at siden skifter farve ved scroll)
+			setTimeout(scroller, 100);
+		}
 
-    //ved klik på kontakt knappen gå til kontakt
-    document.querySelector("#se_kontakt").addEventListener("click", () => {
-      location.href = "kontakt.html"
-    })
+		//ved klik på kontakt knappen gå til kontakt
+		document.querySelector("#se_kontakt").addEventListener("click", () => {
+			location.href = "kontakt.html"
+		})
 
-    document.addEventListener("DOMContentLoaded", hentJSON_smykkekurser);
-
-
-    //variabel der tæller op for hvert værk
-    let N = 0;
-
-    //async funktion der henter værkerne
-    async function hentJSON_smykkekurser() {
-      let wpEnd = `vaerk?_fields=title,aarstal,beskrivelse,thumb,bg,txt&per_page=10`; //dette sætte bag på WP i næste linje
-      const response = await fetch(wp + wpEnd); //sammen giver de et link, til en JSON fra WP
-      let json = await response.json(); //lav denne til en læsbar JSON
-
-      hentJSON_smykkekurser_splash();
-
-      //for hvert værk
-      json.forEach((t) => {
-        N++;
-
-        let s = document.createElement("section"); //lav en section
-        s.classList.add("layout_section"); //giv den en class
-        s.dataset.secnr = N; //giv den en data attribut med N som nummer
-        s.dataset.bg = t.bg; //giv den en data attribut med baggrundsfarven fra WP
-        s.dataset.txt = t.txt; //giv den en data attribut med tekstfarven fra WP
-        s.id = `vaerker_section_${N}`; //giv den en unik ID med N
-
-        //lav forskellige HTML tag med indholdet fra WP
-        let content_wrap = document.createElement("div");
-        content_wrap.classList.add("content_wrap");
-        let besk_wrap = document.createElement("div");
-        besk_wrap.classList.add("besk_wrap");
-        let aarstal = document.createElement("h3");
-        aarstal.textContent = t.aarstal; //FX årstallet
-        let titel = document.createElement("h4");
-        titel.innerHTML = t.title.rendered; //eller titlen
-        let cta = document.createElement("button");
-        cta.textContent = "læs mere";
-
-        //ved klik på læs mere gå til vaerk.html med variablen 'id'
-        cta.addEventListener("click", () => {
-          location.href = `vaerk.html?id=${s.dataset.secnr}`;
-        })
-        besk_wrap.appendChild(aarstal);
-        besk_wrap.appendChild(titel);
-        besk_wrap.appendChild(cta);
-        content_wrap.appendChild(besk_wrap);
-
-        //indsæt også et billede
-        let img = document.createElement("img");
-        img.style.cursor = "pointer";
-        img.src = t.thumb[0].guid; //t.thumb[0].guid betyder guid fra det FØRSTE billede
-        img.alt = t.thumb[0].post_excerpt; //i arrays starter man med at tælle fra 0 - derfor [0]
-
-        //ved klik på billedet gå til vaerk.html med variablen 'id'
-        img.addEventListener("click", () => {
-          location.href = `vaerk.html?id=${s.dataset.secnr}`;
-        })
-        content_wrap.appendChild(img);
-
-        //hvis det er en bestemt sektion (sektion 7n+1 eller 7n+4) lav et billede mere
-        if (N % 7 == 1 || N % 7 == 4) {
-          let img2 = document.createElement("img");
-          img2.style.cursor = "pointer";
-          img2.src = t.thumb[1].guid; //t.thumb[1].guid betyder guid fra det ANDET billede
-          img2.alt = t.thumb[1].post_excerpt; //i arrays starter man med at tælle fra 0 - derfor [1]
-          img2.addEventListener("click", () => {
-            location.href = `vaerk.html?id=${s.dataset.secnr}`;
-          })
-          content_wrap.appendChild(img2);
-        }
-
-        s.appendChild(content_wrap);
-        document.querySelector("#fill").appendChild(s);
-
-        //lav menuen over værker i venste side
-        let li = document.createElement("li");
-        li.dataset.number = N;
-        let p = document.createElement("p");
-        p.innerHTML = t.title.rendered;
-        li.appendChild(p);
-        document.querySelector("#content_list").appendChild(li);
-
-        //ved klik på et menupunkt
-        li.addEventListener("click", function() {
-          var targetSection = `.layout_section:nth-child(7n+${this.dataset.number})`; //definer, hvilken section menupunktet svarer til ved at bruge dataattributen
-          console.log(this.dataset.number);
-
-          //brug GSAP og ScrollToPlugin til at hoppe derned
-          gsap.to(window, {
-            duration: 1,
-            scrollTo: targetSection,
-            ease: "power3.inOut"
-          })
-        })
-      })
-    }
-
-    function scroller() {
-
-      //IKKE RELAVANT LÆNGERE - GLEMTE AT SLETTE vvvvvvvv
-      if (window.innerWidth > 1200) {
-        var scrollHeight = document.querySelector("#fill").clientHeight - window.innerHeight;
-
-        var tl = gsap.timeline()
-
-        tl.to("#content_list", {
-          y: (window.innerHeight * .3) + scrollHeight,
-          ease: "none"
-        })
-
-        var ourScene = new ScrollMagic.Scene({
-            triggerElement: "#content_list_wrap",
-            duration: scrollHeight,
-            triggerHook: .1
-          })
-          .setTween(tl)
-          .addTo(controller)
-      }
-      //IKKE RELAVANT LÆNGERE - GLEMTE AT SLETTE ^^^^^^
-
-      //lav en smooth scroll af splash
-      var splashScene = new ScrollMagic.Scene({
-          triggerElement: ".splash_col_wrap",
-          duration: "200%",
-          triggerHook: 0
-        })
-        .setTween(
-          gsap.to(".splash_col", {
-            y: "100%",
-            ease: "none"
-          })
-        )
-        .addTo(controller)
-
-      //set #main's BG color til hvid
-      document.querySelector("#main").style.background = "rgba(255, 255, 255, 1)";
-
-      //for hver section
-      document.querySelectorAll(".layout_section").forEach((s) => {
-        var bg = s.dataset.bg; //sektionens baggrundsfarve fra WP
-        var txt = s.dataset.txt; //sektionens tekstfarve fra WP
-        var timeline = gsap.timeline() //lav GSAP tidslinje (fordi flere animationer)
-
-        //sæt elementerne til at være enten BG eller TXT farvet
-        timeline.to("#main", { //'to' betyder til denne værdi
-            background: "#" + bg, //ændr #main's baggrundsfarve til #bg
-            ease: "power1.inOut" //med easingen power1.inOut
-          }, 0) //start samtidig med alle de andre (derfor ', 0')
-          .to("#main *", {
-            color: "#" + txt,
-            ease: "power1.inOut"
-          }, 0)
-          .to("button", {
-            background: "#" + txt,
-            color: "#" + bg,
-            ease: "power1.inOut"
-          }, 0)
-          .to(".nav_link_wrap", {
-            background: "#" + bg,
-            ease: "power1.inOut"
-          }, 0)
-          .to("nav", {
-            background: "#" + bg,
-            ease: "power1.inOut"
-          }, 0)
-          .to(".nav_link", {
-            color: "#" + txt,
-            ease: "power1.inOut"
-          }, 0)
-          .to(".nav_link a", {
-            color: "#" + txt,
-            ease: "power1.inOut"
-          }, 0)
-          .to(".nav_link_wrap ul", {
-            background: "#" + bg,
-            ease: "power1.inOut"
-          }, 0)
-          .to(logo, {
-            fill: "#" + txt,
-            ease: "power1.inOut"
-          }, 0)
-          .to(burger1_wrap, {
-            fill: "#" + txt,
-            ease: "power1.inOut"
-          }, 0)
-          .to(burger2_wrap, {
-            fill: "#" + txt,
-            ease: "power1.inOut"
-          }, 0)
-          .to(burger3_wrap, {
-            fill: "#" + txt,
-            ease: "power1.inOut"
-          }, 0)
-
-        //ændr menuen når man scroller
-        document.querySelectorAll("#content_list li").forEach((l) => {
-          let p = l.querySelector("p");
-          if (s.dataset.secnr == l.dataset.number) {
-            timeline.to(p, { //vigtigt: sæt dem ind i samme tidslinje som de andre farveskift
-              backgroundColor: "rgba(255, 255, 255, 1)", //sæt baggrundsfarven til hvid
-              fontWeight: "300"
-            }, 0)
-          } else {
-            timeline.to(p, {
-              backgroundColor: "rgba(255, 255, 255, 0)", //sæt baggrundsfarven til gennemsigtig
-              fontWeight: "300"
-            }, 0)
-          }
-        })
-
-        //VIGTIGT!!!
-        var scene = new ScrollMagic.Scene({
-            triggerElement: s, //når man når til s (altså sektionen i forEach loopet)
-            duration: "25%", //på 25% af viewportHeight
-            triggerHook: .7 //70% fra toppen af siden
-          })
-          .setTween(timeline) //afspil da vores tidslinje med alle farveskiftene
-          .addTo(controller) //føj til ScrollMagic
-      })
+		document.addEventListener("DOMContentLoaded", hentJSON_smykkekurser);
 
 
+		//variabel der tæller op for hvert værk
+		let N = 0;
 
-      //når man når til CV, ændre da farverne til sort/hvid
-      var timelineCV = gsap.timeline()
+		//async funktion der henter værkerne
+		async function hentJSON_smykkekurser() {
+			let wpEnd = `vaerk?_fields=title,aarstal,beskrivelse,thumb,bg,txt&per_page=10`; //dette sætte bag på WP i næste linje
+			const response = await fetch(wp + wpEnd); //sammen giver de et link, til en JSON fra WP
+			let json = await response.json(); //lav denne til en læsbar JSON
 
-      timelineCV.to("#main", {
-          background: "#fff",
-          ease: "power1.inOut"
-        }, 0)
-        .to("#main *", {
-          color: "#000",
-          ease: "power1.inOut"
-        }, 0)
-        .to("button", {
-          background: "#000",
-          color: "#fff",
-          ease: "power1.inOut"
-        }, 0)
-        .to(".nav_link_wrap", {
-          background: "#fff",
-          ease: "power1.inOut"
-        }, 0)
-        .to("nav", {
-          background: "#fff",
-          ease: "power1.inOut"
-        }, 0)
-        .to(".nav_link", {
-          color: "#000",
-          ease: "power1.inOut"
-        }, 0)
-        .to(".nav_link a", {
-          color: "#000",
-          ease: "power1.inOut"
-        }, 0)
-        .to(".nav_link_wrap ul", {
-          background: "#fff",
-          ease: "power1.inOut"
-        }, 0)
-        .to(logo, {
-          fill: "#000",
-          ease: "power1.inOut"
-        }, 0)
-        .to(burger1_wrap, {
-          fill: "#000",
-          ease: "power1.inOut"
-        }, 0)
-        .to(burger2_wrap, {
-          fill: "#000",
-          ease: "power1.inOut"
-        }, 0)
-        .to(burger3_wrap, {
-          fill: "#000",
-          ease: "power1.inOut"
-        }, 0)
+			hentJSON_smykkekurser_splash();
 
-      //samme teknik som forrige ScrollMagic.Scene bare med CV tidslinjen
-      var scene = new ScrollMagic.Scene({
-          triggerElement: ".cv_group",
-          duration: "25%",
-          triggerHook: .7
-        })
-        .setTween(timelineCV)
-        .addTo(controller)
-    }
+			//for hvert værk
+			json.forEach((t) => {
+				N++;
 
-  </script>
-</body>
+				let s = document.createElement("section"); //lav en section
+				s.classList.add("layout_section"); //giv den en class
+				s.dataset.secnr = N; //giv den en data attribut med N som nummer
+				s.dataset.bg = t.bg; //giv den en data attribut med baggrundsfarven fra WP
+				s.dataset.txt = t.txt; //giv den en data attribut med tekstfarven fra WP
+				s.id = `vaerker_section_${N}`; //giv den en unik ID med N
 
-</html>
+				//lav forskellige HTML tag med indholdet fra WP
+				let content_wrap = document.createElement("div");
+				content_wrap.classList.add("content_wrap");
+				let besk_wrap = document.createElement("div");
+				besk_wrap.classList.add("besk_wrap");
+				let aarstal = document.createElement("h3");
+				aarstal.textContent = t.aarstal; //FX årstallet
+				let titel = document.createElement("h4");
+				titel.innerHTML = t.title.rendered; //eller titlen
+				let cta = document.createElement("button");
+				cta.textContent = "læs mere";
+
+				//ved klik på læs mere gå til vaerk.html med variablen 'id'
+				cta.addEventListener("click", () => {
+					location.href = `vaerk.html?id=${s.dataset.secnr}`;
+				})
+				besk_wrap.appendChild(aarstal);
+				besk_wrap.appendChild(titel);
+				besk_wrap.appendChild(cta);
+				content_wrap.appendChild(besk_wrap);
+
+				//indsæt også et billede
+				let img = document.createElement("img");
+				img.style.cursor = "pointer";
+				img.src = t.thumb[0].guid; //t.thumb[0].guid betyder guid fra det FØRSTE billede
+				img.alt = t.thumb[0].post_excerpt; //i arrays starter man med at tælle fra 0 - derfor [0]
+
+				//ved klik på billedet gå til vaerk.html med variablen 'id'
+				img.addEventListener("click", () => {
+					location.href = `vaerk.html?id=${s.dataset.secnr}`;
+				})
+				content_wrap.appendChild(img);
+
+				//hvis det er en bestemt sektion (sektion 7n+1 eller 7n+4) lav et billede mere
+				if (N % 7 == 1 || N % 7 == 4) {
+					let img2 = document.createElement("img");
+					img2.style.cursor = "pointer";
+					img2.src = t.thumb[1].guid; //t.thumb[1].guid betyder guid fra det ANDET billede
+					img2.alt = t.thumb[1].post_excerpt; //i arrays starter man med at tælle fra 0 - derfor [1]
+					img2.addEventListener("click", () => {
+						location.href = `vaerk.html?id=${s.dataset.secnr}`;
+					})
+					content_wrap.appendChild(img2);
+				}
+
+				s.appendChild(content_wrap);
+				document.querySelector("#fill").appendChild(s);
+
+				//lav menuen over værker i venste side
+				let li = document.createElement("li");
+				li.dataset.number = N;
+				let p = document.createElement("p");
+				p.innerHTML = t.title.rendered;
+				li.appendChild(p);
+				document.querySelector("#content_list").appendChild(li);
+
+				//ved klik på et menupunkt
+				li.addEventListener("click", function() {
+					var targetSection = `.layout_section:nth-child(7n+${this.dataset.number})`; //definer, hvilken section menupunktet svarer til ved at bruge dataattributen
+					console.log(this.dataset.number);
+
+					//brug GSAP og ScrollToPlugin til at hoppe derned
+					gsap.to(window, {
+						duration: 1,
+						scrollTo: targetSection,
+						ease: "power3.inOut"
+					})
+				})
+			})
+		}
+
+		function scroller() {
+
+			//IKKE RELAVANT LÆNGERE - GLEMTE AT SLETTE vvvvvvvv
+			if (window.innerWidth > 1200) {
+				var scrollHeight = document.querySelector("#fill").clientHeight - window.innerHeight;
+
+				var tl = gsap.timeline()
+
+				tl.to("#content_list", {
+					y: (window.innerHeight * .3) + scrollHeight,
+					ease: "none"
+				})
+
+				var ourScene = new ScrollMagic.Scene({
+						triggerElement: "#content_list_wrap",
+						duration: scrollHeight,
+						triggerHook: .1
+					})
+					.setTween(tl)
+					.addTo(controller)
+			}
+			//IKKE RELAVANT LÆNGERE - GLEMTE AT SLETTE ^^^^^^
+
+			//lav en smooth scroll af splash
+			var splashScene = new ScrollMagic.Scene({
+					triggerElement: ".splash_col_wrap",
+					duration: "200%",
+					triggerHook: 0
+				})
+				.setTween(
+					gsap.to(".splash_col", {
+						y: "100%",
+						ease: "none"
+					})
+				)
+				.addTo(controller)
+
+			//set #main's BG color til hvid
+			document.querySelector("#main").style.background = "rgba(255, 255, 255, 1)";
+
+			//for hver section
+			document.querySelectorAll(".layout_section").forEach((s) => {
+				var bg = s.dataset.bg; //sektionens baggrundsfarve fra WP
+				var txt = s.dataset.txt; //sektionens tekstfarve fra WP
+				var timeline = gsap.timeline() //lav GSAP tidslinje (fordi flere animationer)
+
+				//sæt elementerne til at være enten BG eller TXT farvet
+				timeline.to("#main", { //'to' betyder til denne værdi
+						background: "#" + bg, //ændr #main's baggrundsfarve til #bg
+						ease: "power1.inOut" //med easingen power1.inOut
+					}, 0) //start samtidig med alle de andre (derfor ', 0')
+					.to("#main *", {
+						color: "#" + txt,
+						ease: "power1.inOut"
+					}, 0)
+					.to("button", {
+						background: "#" + txt,
+						color: "#" + bg,
+						ease: "power1.inOut"
+					}, 0)
+					.to(".nav_link_wrap", {
+						background: "#" + bg,
+						ease: "power1.inOut"
+					}, 0)
+					.to("nav", {
+						background: "#" + bg,
+						ease: "power1.inOut"
+					}, 0)
+					.to(".nav_link", {
+						color: "#" + txt,
+						ease: "power1.inOut"
+					}, 0)
+					.to(".nav_link a", {
+						color: "#" + txt,
+						ease: "power1.inOut"
+					}, 0)
+					.to(".nav_link_wrap ul", {
+						background: "#" + bg,
+						ease: "power1.inOut"
+					}, 0)
+					.to(logo, {
+						fill: "#" + txt,
+						ease: "power1.inOut"
+					}, 0)
+					.to(burger1_wrap, {
+						fill: "#" + txt,
+						ease: "power1.inOut"
+					}, 0)
+					.to(burger2_wrap, {
+						fill: "#" + txt,
+						ease: "power1.inOut"
+					}, 0)
+					.to(burger3_wrap, {
+						fill: "#" + txt,
+						ease: "power1.inOut"
+					}, 0)
+
+				//ændr menuen når man scroller
+				document.querySelectorAll("#content_list li").forEach((l) => {
+					let p = l.querySelector("p");
+					if (s.dataset.secnr == l.dataset.number) {
+						timeline.to(p, { //vigtigt: sæt dem ind i samme tidslinje som de andre farveskift
+							backgroundColor: "rgba(255, 255, 255, 1)", //sæt baggrundsfarven til hvid
+							fontWeight: "300"
+						}, 0)
+					} else {
+						timeline.to(p, {
+							backgroundColor: "rgba(255, 255, 255, 0)", //sæt baggrundsfarven til gennemsigtig
+							fontWeight: "300"
+						}, 0)
+					}
+				})
+
+				//VIGTIGT!!!
+				var scene = new ScrollMagic.Scene({
+						triggerElement: s, //når man når til s (altså sektionen i forEach loopet)
+						duration: "25%", //på 25% af viewportHeight
+						triggerHook: .7 //70% fra toppen af siden
+					})
+					.setTween(timeline) //afspil da vores tidslinje med alle farveskiftene
+					.addTo(controller) //føj til ScrollMagic
+					.addIndicators()
+			})
+
+
+
+			//når man når til CV, ændre da farverne til sort/hvid
+			var timelineCV = gsap.timeline()
+
+			timelineCV.to("#main", {
+					background: "#fff",
+					ease: "power1.inOut"
+				}, 0)
+				.to("#main *", {
+					color: "#000",
+					ease: "power1.inOut"
+				}, 0)
+				.to("button", {
+					background: "#000",
+					color: "#fff",
+					ease: "power1.inOut"
+				}, 0)
+				.to(".nav_link_wrap", {
+					background: "#fff",
+					ease: "power1.inOut"
+				}, 0)
+				.to("nav", {
+					background: "#fff",
+					ease: "power1.inOut"
+				}, 0)
+				.to(".nav_link", {
+					color: "#000",
+					ease: "power1.inOut"
+				}, 0)
+				.to(".nav_link a", {
+					color: "#000",
+					ease: "power1.inOut"
+				}, 0)
+				.to(".nav_link_wrap ul", {
+					background: "#fff",
+					ease: "power1.inOut"
+				}, 0)
+				.to(logo, {
+					fill: "#000",
+					ease: "power1.inOut"
+				}, 0)
+				.to(burger1_wrap, {
+					fill: "#000",
+					ease: "power1.inOut"
+				}, 0)
+				.to(burger2_wrap, {
+					fill: "#000",
+					ease: "power1.inOut"
+				}, 0)
+				.to(burger3_wrap, {
+					fill: "#000",
+					ease: "power1.inOut"
+				}, 0)
+
+			//samme teknik som forrige ScrollMagic.Scene bare med CV tidslinjen
+			var scene = new ScrollMagic.Scene({
+					triggerElement: ".cv_group",
+					duration: "25%",
+					triggerHook: .7
+				})
+				.setTween(timelineCV)
+				.addTo(controller)
+		}
+	</script>
+</body></html>
