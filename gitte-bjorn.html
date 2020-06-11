@@ -689,8 +689,10 @@
       </div>
     </div>
     <div id="fill_wrap">
+      <!--    Alle værker-->
       <div id="content_list_wrap">
         <ul id="content_list">
+          <!--       Menuen ude i siden  -->
         </ul>
       </div>
       <div id="fill"></div>
@@ -743,29 +745,29 @@
 
   <!--Placer til scroll ned indikator på siden-->
   <script src="js/scrollarrow.js"></script>
+  <!--inline script starter her-->
   <script>
-
     //async function der henter Gitte Bjørns CV
     async function hentJSON_smykkekurser_splash() {
       let wpEnd = `pages/29?_fields=content`;
       const response = await fetch(wp + wpEnd);
       let json = await response.json();
 
-      let cv = document.createElement("div");                 //byg cv container
-      cv.id = "cv_list";                                      //giv den en ID
-      cv.innerHTML = json.content.rendered;                   //fyld med content fra WP
-      document.querySelector("#fill_wrap").appendChild(cv);   //sæt ind i HTML
+      let cv = document.createElement("div"); //byg cv container
+      cv.id = "cv_list"; //giv den en ID
+      cv.innerHTML = json.content.rendered; //fyld med content fra WP
+      document.querySelector("#fill_wrap").appendChild(cv); //sæt ind i HTML
 
       //ved klik på knappen SE SV
       document.querySelector("#se_cv").addEventListener("click", () => {
         //brug GSAP og ScrollToPlugin til at scrolle ned
         gsap.to(window, {
-          duration: 1,           //på 1 sek
+          duration: 1, //på 1 sek
           scrollTo: ".cv_group", //til CV
-          ease: "power3.inOut"   //med easing power3.out
+          ease: "power3.inOut" //med easing power3.out
         })
       })
-      //samme som ovenfor bare til vørste bærk
+      //samme som ovenfor bare til første værk
       document.querySelector("#se_va").addEventListener("click", () => {
         gsap.to(window, {
           duration: 1,
@@ -791,9 +793,9 @@
 
     //async funktion der henter værkerne
     async function hentJSON_smykkekurser() {
-      let wpEnd = `vaerk?_fields=title,aarstal,beskrivelse,thumb,bg,txt&per_page=10`;  //dette sætte bag på WP i næste linje
-      const response = await fetch(wp + wpEnd);                                        //sammen giver de et link, til en JSON fra WP
-      let json = await response.json();                                                //lav denne til en læsbar JSON
+      let wpEnd = `vaerk?_fields=title,aarstal,beskrivelse,thumb,bg,txt&per_page=10`; //dette sætte bag på WP i næste linje
+      const response = await fetch(wp + wpEnd); //sammen giver de et link, til en JSON fra WP
+      let json = await response.json(); //lav denne til en læsbar JSON
 
       hentJSON_smykkekurser_splash();
 
@@ -802,11 +804,11 @@
         N++;
 
         let s = document.createElement("section"); //lav en section
-        s.classList.add("layout_section");         //giv den en class
-        s.dataset.secnr = N;                       //giv den en data attribut med N som nummer
-        s.dataset.bg = t.bg;                       //giv den en data attribut med baggrundsfarven fra WP
-        s.dataset.txt = t.txt;                     //giv den en data attribut med tekstfarven fra WP
-        s.id = `vaerker_section_${N}`;             //giv den en unik ID med N
+        s.classList.add("layout_section"); //giv den en class
+        s.dataset.secnr = N; //giv den en data attribut med N som nummer
+        s.dataset.bg = t.bg; //giv den en data attribut med baggrundsfarven fra WP
+        s.dataset.txt = t.txt; //giv den en data attribut med tekstfarven fra WP
+        s.id = `vaerker_section_${N}`; //giv den en unik ID med N
 
         //lav forskellige HTML tag med indholdet fra WP
         let content_wrap = document.createElement("div");
@@ -814,9 +816,9 @@
         let besk_wrap = document.createElement("div");
         besk_wrap.classList.add("besk_wrap");
         let aarstal = document.createElement("h3");
-        aarstal.textContent = t.aarstal;                  //FX årstallet
+        aarstal.textContent = t.aarstal; //FX årstallet
         let titel = document.createElement("h4");
-        titel.innerHTML = t.title.rendered;               //eller titlen
+        titel.innerHTML = t.title.rendered; //eller titlen
         let cta = document.createElement("button");
         cta.textContent = "læs mere";
 
@@ -832,8 +834,8 @@
         //indsæt også et billede
         let img = document.createElement("img");
         img.style.cursor = "pointer";
-        img.src = t.thumb[0].guid;           //t.thumb[0].guid betyder guid fra det FØRSTE billede
-        img.alt = t.thumb[0].post_excerpt;   //i arrays starter man med at tælle fra 0 - derfor [0]
+        img.src = t.thumb[0].guid; //t.thumb[0].guid betyder guid fra det FØRSTE billede
+        img.alt = t.thumb[0].post_excerpt; //i arrays starter man med at tælle fra 0 - derfor [0]
 
         //ved klik på billedet gå til vaerk.html med variablen 'id'
         img.addEventListener("click", () => {
@@ -845,8 +847,8 @@
         if (N % 7 == 1 || N % 7 == 4) {
           let img2 = document.createElement("img");
           img2.style.cursor = "pointer";
-          img2.src = t.thumb[1].guid;        //t.thumb[1].guid betyder guid fra det ANDET billede
-          img2.alt = t.thumb[1].post_excerpt;//i arrays starter man med at tælle fra 0 - derfor [1]
+          img2.src = t.thumb[1].guid; //t.thumb[1].guid betyder guid fra det ANDET billede
+          img2.alt = t.thumb[1].post_excerpt; //i arrays starter man med at tælle fra 0 - derfor [1]
           img2.addEventListener("click", () => {
             location.href = `vaerk.html?id=${s.dataset.secnr}`;
           })
@@ -921,15 +923,15 @@
 
       //for hver section
       document.querySelectorAll(".layout_section").forEach((s) => {
-        var bg = s.dataset.bg;         //sektionens baggrundsfarve fra WP
-        var txt = s.dataset.txt;       //sektionens tekstfarve fra WP
+        var bg = s.dataset.bg; //sektionens baggrundsfarve fra WP
+        var txt = s.dataset.txt; //sektionens tekstfarve fra WP
         var timeline = gsap.timeline() //lav GSAP tidslinje (fordi flere animationer)
 
         //sæt elementerne til at være enten BG eller TXT farvet
-        timeline.to("#main", {    //'to' betyder til denne værdi
+        timeline.to("#main", { //'to' betyder til denne værdi
             background: "#" + bg, //ændr #main's baggrundsfarve til #bg
-            ease: "power1.inOut"  //med easingen power1.inOut
-          }, 0)                   //start samtidig med alle de andre (derfor ', 0')
+            ease: "power1.inOut" //med easingen power1.inOut
+          }, 0) //start samtidig med alle de andre (derfor ', 0')
           .to("#main *", {
             color: "#" + txt,
             ease: "power1.inOut"
@@ -980,13 +982,13 @@
         document.querySelectorAll("#content_list li").forEach((l) => {
           let p = l.querySelector("p");
           if (s.dataset.secnr == l.dataset.number) {
-            timeline.to(p, {  //vigtigt: sæt dem ind i samme tidslinje som de andre farveskift
-              backgroundColor: "rgba(255, 255, 255, 1)",  //sæt baggrundsfarven til hvid
+            timeline.to(p, { //vigtigt: sæt dem ind i samme tidslinje som de andre farveskift
+              backgroundColor: "rgba(255, 255, 255, 1)", //sæt baggrundsfarven til hvid
               fontWeight: "300"
             }, 0)
           } else {
             timeline.to(p, {
-              backgroundColor: "rgba(255, 255, 255, 0)",  //sæt baggrundsfarven til gennemsigtig
+              backgroundColor: "rgba(255, 255, 255, 0)", //sæt baggrundsfarven til gennemsigtig
               fontWeight: "300"
             }, 0)
           }
@@ -994,12 +996,12 @@
 
         //VIGTIGT!!!
         var scene = new ScrollMagic.Scene({
-            triggerElement: s,   //når man når til s (altså sektionen i forEach loopet)
-            duration: "25%",     //på 25% af viewportHeight
-            triggerHook: .7      //70% fra toppen af siden
+            triggerElement: s, //når man når til s (altså sektionen i forEach loopet)
+            duration: "25%", //på 25% af viewportHeight
+            triggerHook: .7 //70% fra toppen af siden
           })
-          .setTween(timeline)    //afspil da vores tidslinje med alle farveskiftene
-          .addTo(controller)     //føj til ScrollMagic
+          .setTween(timeline) //afspil da vores tidslinje med alle farveskiftene
+          .addTo(controller) //føj til ScrollMagic
       })
 
 

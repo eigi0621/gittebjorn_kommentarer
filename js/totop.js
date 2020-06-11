@@ -10,6 +10,7 @@ toTop.addEventListener("click", () => {
   })
 })
 
+//ved hjælp af scroolmagic, kommer knappen frem når brugeren har scrollet lidt ned på siden
 
 var controller = new ScrollMagic.Controller();
 
