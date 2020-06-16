@@ -216,7 +216,6 @@
         align-items: center;
       }
     }
-
   </style>
   <style>
     img {
@@ -329,7 +328,6 @@
         grid-column: 4/7;
       }
     }
-
   </style>
 </head>
 
@@ -385,21 +383,32 @@
   <script src="js/totop.js"></script>
   <script>
     let startJson = true;
+
+    //tilføjer eventlistener der gør når siden indlæser, kør hent JSON funktioner
     document.addEventListener("DOMContentLoaded", () => {
       hentJSON_kurser();
       hentJSON_smykkekurser();
       hentJSON_sorter();
     });
 
+    //function hentJSON_kurser, da vi har lavet flere pods i wordpress alt efter hvilket indhold der skal hentes. Først vil vi hente json for indholdet til podden "Kursus", som er oversigten over hvilke kurser man kan tilmelde sig. Vi har delt indholdet op i flere pods, så det ville være nemmere for dem, der skal vedligeholde siden, når man i fremtiden vil tilføje eller slette eksisterende kurser, da dette er den mest essentielle del af siden, da det er det, der tjener penge, og formålet med smykkekurser og alt indholdet er, at få folk til at tilmelde sig. Da de ofte skal ændres efter sæsonen, er det vigtigt, at det er nemt og overskueligt for brugeren at kunne ændre/opdatere. Resten af indholdet på siden skal ikke ændres, så derfor ligger det i en anden pod i wordpress, og som seperat json.
     async function hentJSON_kurser(kat) {
+
+      //Vi har før i scriptet menu.js defineret variablen wp, som er linket til det udgangspunkt vores json hentes fra. Så alt efter hvilket specifikt indhold vi skal hente json til, kan vi blot tilføje slutningen det resterende af linket, da starten af linket altid er det samme. http://eigilnikolajsen.dk/kea/10_eksamen/wordpress/wp-json/wp/v2/;
+      //Her har vi specifikt defineret hvilket præcise fields i wp det er, vi vil hente, da det lige præcis er disse, der skal bruges. Tilføjer per_page=100 for at være sikker på, at vi ikke glemmer noget indhold, hvis der skulle være mere indhold end standard?
       let wpEnd = `kursus?_fields=id,title,kategori,img,p,niveau,holdnr,start_tid,slut_tid,ugedag,underviser,forste_mode,sidste_mode,modegange,lektioner,almen_pris,nedsat_pris,cta,tilmeld_link&order=desc&per_page=100`;
+      //definerer konstant der henter indholdet fra det link, vi vil have vores json fra. Await gør vi venter på at vi har hentet indholdet inden den kører videre
       const response = await fetch(wp + wpEnd);
+      //definerer variable json, hvor variablen indholder det vi har hentet i forrige konstant
       let json = await response.json();
 
+      //så vi er sikker på der ikke er noget HTML på vores side endnu
       document.querySelector("#fill").innerHTML = "";
       console.log(kat);
 
+      //foreach loop, hvor vi bygger html for menuen og tilføjer css klasserne vha JS, der viser kurserne man kan tilmelde sig, hvor t er hvert kursus der er tilføjet i poden i WP
       json.forEach((t) => {
+        //fortæller at den kun skal bygge al dette, en af disse if statements er rigtige
         if (t.kategori.includes(kat) == true || kat == "alle" || startJson == true) {
           let s = document.createElement("section");
           s.classList.add("kursus_section");
@@ -619,8 +628,5 @@
         return array[array.length - 1];
       return array.slice(Math.max(array.length - n, 0));
     }
-
   </script>
-</body>
-
-</html>
+</body></html>
